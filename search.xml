@@ -4,23 +4,25 @@
   
     
     <entry>
-      <title>firstBlog2</title>
+      <title>firstBlog</title>
       <link href="2021/02/16/firstBlog/"/>
       <url>2021/02/16/firstBlog/</url>
       
-        <content type="html"><![CDATA[<h2 id="测试第一篇博客"><a href="#测试第一篇博客" class="headerlink" title="测试第一篇博客"></a>测试第一篇博客</h2><p>一堆文字：懒得打<br>title: typora-vue-theme主题介绍<br>date: 2018-09-07 09:25:00<br>author: 赵奇<br>img:<br>top: true<br>cover: true<br>coverImg:<br>password:<br>toc: false<br>mathjax: false<br>summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要<br>categories: Markdown<br>tags:</p><ul><li>Typora</li><li>Markdown<br><img src="http://p2.qhimg.com/bdr/__85/t01c3e3af08d2cef8db.jpg" alt="test 一个小姐姐"></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="拽写第一篇博客"><a href="#拽写第一篇博客" class="headerlink" title="拽写第一篇博客"></a>拽写第一篇博客</h1><h2 id="新建文章模板含义"><a href="#新建文章模板含义" class="headerlink" title="新建文章模板含义:"></a>新建文章模板含义:</h2><p>title: firstBlog  #文章标题<br>date: 1613442308000    #文件创建时间<br>author:             #文章作者<br>img: 直接填链接      #文章封面图<br>coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片<br>top: false          #文章是否置顶<br>cover: false        #表示该文章是否需要加入到首页轮播封面中<br>toc: true           #约束<br>mathjax: false      #是否开启数学公式支持<br>password:           #设置阅读文章验证密码 不填写默认没有<br>summary:            #自定义的文章摘要内容 不填写则为文章首内容<br>categories:         #文章分类 只能写一个<br>tags:               #文章标签 能写多个<br>    -文章标签1<br>    -文章标签2</p><h2 id="markdow的基础用法："><a href="#markdow的基础用法：" class="headerlink" title="markdow的基础用法："></a>markdow的基础用法：</h2><h3 id="图片引入方法"><a href="#图片引入方法" class="headerlink" title="图片引入方法"></a>图片引入方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](填写图片url) 图片描述可以不写</span><br></pre></td></tr></table></figure><p><img src="http://p2.qhimg.com/bdr/__85/t01c3e3af08d2cef8db.jpg"></p>]]></content>
       
       
       <categories>
           
-          <category> Test </category>
+          <category> Blog </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 测试 </tag>
+            <tag> Blog </tag>
+            
+            <tag> Markdow </tag>
             
         </tags>
       
