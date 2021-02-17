@@ -4,11 +4,38 @@
   
     
     <entry>
-      <title>firstBlog</title>
-      <link href="2021/02/16/firstBlog/"/>
-      <url>2021/02/16/firstBlog/</url>
+      <title>blog</title>
+      <link href="2021/02/17/blog-1/"/>
+      <url>2021/02/17/blog-1/</url>
       
-        <content type="html"><![CDATA[<h1 id="拽写第一篇博客"><a href="#拽写第一篇博客" class="headerlink" title="拽写第一篇博客"></a>拽写第一篇博客</h1><h2 id="新建文章模板含义"><a href="#新建文章模板含义" class="headerlink" title="新建文章模板含义:"></a>新建文章模板含义:</h2><p>title: firstBlog  #文章标题<br>date: 1613442308000    #文件创建时间<br>author:             #文章作者<br>img: 直接填链接      #文章封面图<br>coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片<br>top: false          #文章是否置顶<br>cover: false        #表示该文章是否需要加入到首页轮播封面中<br>toc: true           #约束<br>mathjax: false      #是否开启数学公式支持<br>password:           #设置阅读文章验证密码 不填写默认没有<br>summary:            #自定义的文章摘要内容 不填写则为文章首内容<br>categories:         #文章分类 只能写一个<br>tags:               #文章标签 能写多个<br>    -文章标签1<br>    -文章标签2</p><h2 id="markdow的基础用法："><a href="#markdow的基础用法：" class="headerlink" title="markdow的基础用法："></a>markdow的基础用法：</h2><h3 id="图片引入方法"><a href="#图片引入方法" class="headerlink" title="图片引入方法"></a>图片引入方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](填写图片url) 图片描述可以不写</span><br></pre></td></tr></table></figure><p><img src="http://p2.qhimg.com/bdr/__85/t01c3e3af08d2cef8db.jpg"></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Blog </tag>
+            
+            <tag> Markdow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdow的使用-（基础）</title>
+      <link href="2021/02/17/blog/"/>
+      <url>2021/02/17/blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="markdow的基础用法："><a href="#markdow的基础用法：" class="headerlink" title="markdow的基础用法："></a>markdow的基础用法：</h1><h2 id="图片引入方法"><a href="#图片引入方法" class="headerlink" title="图片引入方法"></a>图片引入方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](填写图片url) 图片描述可以不写</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg"></p>]]></content>
       
       
       <categories>
@@ -32,37 +59,26 @@
     
     <entry>
       <title>firstBlog</title>
-      <link href="2021/02/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-      <url>2021/02/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+      <link href="2021/02/16/firstBlog/"/>
+      <url>2021/02/16/firstBlog/</url>
       
-        <content type="html"><![CDATA[<h2 id="测试第一篇博客"><a href="#测试第一篇博客" class="headerlink" title="测试第一篇博客"></a>测试第一篇博客</h2><p>一堆文字：懒得打<br>title: typora-vue-theme主题介绍<br>date: 2018-09-07 09:25:00<br>author: 赵奇<br>img:<br>top: true<br>cover: true<br>coverImg:<br>password:<br>toc: false<br>mathjax: false<br>summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要<br>categories: Markdown<br>tags:</p><ul><li>Typora</li><li>Markdown<br><img src="http://p2.qhimg.com/bdr/__85/t01c3e3af08d2cef8db.jpg" alt="test 一个小姐姐"></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="抒写第一篇博客"><a href="#抒写第一篇博客" class="headerlink" title="抒写第一篇博客"></a>抒写第一篇博客</h1><h2 id="新建文章模板含义"><a href="#新建文章模板含义" class="headerlink" title="新建文章模板含义:"></a>新建文章模板含义:</h2><p>title: firstBlog  #文章标题<br>date: 1613442308000    #文件创建时间<br>author:             #文章作者<br>img: 直接填链接      #文章封面图<br>coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片<br>top: false          #文章是否置顶<br>cover: false        #表示该文章是否需要加入到首页轮播封面中<br>toc: true           #约束<br>mathjax: false      #是否开启数学公式支持<br>password:           #设置阅读文章验证密码 不填写默认没有<br>summary:            #自定义的文章摘要内容 不填写则为文章首内容<br>categories:         #文章分类 只能写一个<br>tags:               #文章标签 能写多个<br>    -文章标签1<br>    -文章标签2</p><h2 id="第一篇Blog的诞生"><a href="#第一篇Blog的诞生" class="headerlink" title="第一篇Blog的诞生:"></a>第一篇Blog的诞生:</h2><p>在只学过小部分web基础上搭建了这个小破站，中途还是有些吃力，太多没有接触的知识、原理，庆幸还可以面向百度面向大佬<br>如果没有这些大佬的解惑和超时空的问答，大概我已经暂时放弃了，待到知识备全在重新开始。<br>最后经过三两天的奋战还是如愿以偿，这一刻无比激动，这一刻让我感受到了编程的多巴胺，这一刻我明白程序员为什么会猝死<br>这一刻我也松了一口气，事实证明我的编程能力也不是很差劲，我能完成或许只是因为付出了比那些大佬多几倍的时间，我只是死磕完成的，换个小白或许也比我快，但至少我实现了。<br>实现了Blog的搭建和部署，从而也学会和理解了很多零散的知识点，对以后或许没有太大作用但不积跬步何以至千里？</p><p><img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg"><br><strong>谢同学或许会偶尔怀疑自己的能力，但谢同学永远坚信明天会更好</strong></p>]]></content>
       
       
       <categories>
           
-          <category> Markdown </category>
+          <category> Blog </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 测试 </tag>
+            <tag> Blog </tag>
+            
+            <tag> Markdow </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="2021/02/15/hello-world/"/>
-      <url>2021/02/15/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
