@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="blog, overwhat">
+    <meta name="keywords" content="Date对象方法-练习, overwhat">
     <meta name="description" content="人生而自由，却无往不在枷锁之中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>blog | overwhat</title>
+    <title>Date对象方法-练习 | overwhat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -432,12 +432,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">blog</h1>
+                    <h1 class="description center-align post-title">Date对象方法-练习</h1>
                 </div>
             </div>
         </div>
@@ -553,12 +553,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Blog/">
-                                <span class="chip bg-color">Blog</span>
+                            <a href="/tags/Date/">
+                                <span class="chip bg-color">Date</span>
                             </a>
                         
-                            <a href="/tags/Markdow/">
-                                <span class="chip bg-color">Markdow</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -569,8 +569,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Blog/" class="post-category">
-                                Blog
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
                             </a>
                         
                     </div>
@@ -582,28 +582,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-17
+                    2021-02-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-17
+                    2021-03-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    613
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -623,7 +623,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <ol>
+<li>编写一个函数，用于返回一个利于阅读的日期字符串格式   年 - 月 - 日 时: 分: 秒<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Time(date) &#123;</span><br><span class="line">           var year &#x3D; date.getFullYear().toString().padStart(4, 0);</span><br><span class="line">           var month &#x3D; date.getMonth().toString().padStart(2, 0);</span><br><span class="line">           var day &#x3D; date.getDate().toString().padStart(2, 0);</span><br><span class="line">           var hours &#x3D; date.getHours().toString().padStart(2, 0);</span><br><span class="line">           var minutes &#x3D; date.getMinutes().toString().padStart(2, 0);</span><br><span class="line">           var seconds &#x3D; date.getSeconds().toString().padStart(2, 0);</span><br><span class="line">           return &#96;$&#123;year&#125;-$&#123;month&#125;-$&#123;day&#125; $&#123;hours&#125;:$&#123;minutes&#125;:$&#123;seconds&#125;&#96;</span><br><span class="line">       &#125;;</span><br><span class="line">       console.log(Time(new Date()));</span><br></pre></td></tr></table></figure></li>
+<li>生日倒计时 计算用户当下距离生日时日天数 如果已过则计算明年的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getDaysToBirthday(month, day) &#123;</span><br><span class="line">           var now &#x3D; new Date();</span><br><span class="line">           var thisYear &#x3D; now.getFullYear();  &#x2F;&#x2F;调用函数获取当前年份并赋值给thisYear</span><br><span class="line">           &#x2F;&#x2F; 用户今年的生日日期</span><br><span class="line">           var birthday &#x3D; new Date(thisYear, month - 1, day);</span><br><span class="line"></span><br><span class="line">           if (birthday &lt; now) &#123;   &#x2F;&#x2F; 判断今年的生日是否已过 已过则计算明年的生日</span><br><span class="line">               birthday.setFullYear(now.getFullYear() + 1);</span><br><span class="line">           &#125;</span><br><span class="line">           var timeDec &#x3D; birthday - now;   &#x2F;&#x2F;用户生日减当前的日期得到毫秒</span><br><span class="line">           var days &#x3D; timeDec &#x2F; (24 * 60 * 60 * 1000)</span><br><span class="line">           return Math.ceil(days) &#x2F;&#x2F;向上取整 不足一天为一天</span><br><span class="line">       &#125;</span><br><span class="line">       console.log(getDaysToBirthday(6, 26));</span><br></pre></td></tr></table></figure></li>
+<li>根据系统当前的月份，输出这一个月每一天的星期<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">function print() &#123;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    var y &#x3D; now.getFullYear(); &#x2F;&#x2F;将当前年份赋值给y</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 使用巧妙的方法判断闰平年间接判断月份天数 这里没有调用判断闰平年</span><br><span class="line">    &#x2F;&#x2F; 方法：将得到的当前月加1 然后天数设置为0 这就等于上个月的最后一天 从而得知这个月有多少天</span><br><span class="line">    var m &#x3D; now.getMonth() + 1; &#x2F;&#x2F;将当前获取到的月份加1并赋值给m</span><br><span class="line"></span><br><span class="line">    var days &#x3D; new Date(y, m, 0).getDate();   &#x2F;&#x2F;含义年为y月为m日为零传给getDate()</span><br><span class="line">    &#x2F;&#x2F; console.log(y, m, days);  &#x2F;&#x2F;当前结果2021 3 31</span><br><span class="line">    for (var i &#x3D; 1; i &lt;&#x3D; days; i++) &#123;</span><br><span class="line">        &#x2F;&#x2F; console.log(&#96;$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日:星期$&#123;new Date(y, m - 1, i).getDay()&#125;&#96;);</span><br><span class="line">        console.log(&#96;$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日：星期$&#123;getDayOfWeek(y, m, i)&#125;&#96;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function getDayOfWeek(year, month, day) &#123;</span><br><span class="line">    var d &#x3D; new Date(year, month - 1, day);</span><br><span class="line">    var day &#x3D; d.getDay(); &#x2F;&#x2F;得到星期</span><br><span class="line">    &#x2F;&#x2F; 进行匹配</span><br><span class="line">    switch (day) &#123;</span><br><span class="line">        case 0:</span><br><span class="line">            return &quot;日&quot;;</span><br><span class="line">        case 1:</span><br><span class="line">            return &quot;一&quot;;</span><br><span class="line">        case 2:</span><br><span class="line">            return &quot;二&quot;;</span><br><span class="line">        case 3:</span><br><span class="line">            return &quot;三&quot;;</span><br><span class="line">        case 4:</span><br><span class="line">            return &quot;四&quot;;</span><br><span class="line">        case 5:</span><br><span class="line">            return &quot;五&quot;;</span><br><span class="line">        case 6:</span><br><span class="line">            return &quot;六&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">print();</span><br></pre></td></tr></table></figure></li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -649,7 +654,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://overwhatx.github.io/2021/02/17/blog-1/">https://overwhatx.github.io/2021/02/17/blog-1/</a>
+                    <a href="https://overwhatx.github.io/2021/02/02/blog-js-1/">https://overwhatx.github.io/2021/02/02/blog-js-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,12 +692,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Blog/">
-                                    <span class="chip bg-color">Blog</span>
+                                <a href="/tags/Date/">
+                                    <span class="chip bg-color">Date</span>
                                 </a>
                             
-                                <a href="/tags/Markdow/">
-                                    <span class="chip bg-color">Markdow</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -863,7 +868,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-02-17T11-51-04',
+        id: '2021-02-02T22-58-26',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -891,18 +896,16 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/17/blog-1/">
+                <a href="/2021/02/17/blog/">
                     <div class="card-image">
                         
+                        <img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg" class="responsive-img" alt="Markdow的使用-（基础）">
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="blog">
-                        
-                        <span class="card-title">blog</span>
+                        <span class="card-title">Markdow的使用-（基础）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -912,9 +915,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -927,7 +930,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -950,30 +952,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/17/blog/">
+                <a href="/2021/02/02/blog-js/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg" class="responsive-img" alt="Markdow的使用-（基础）">
+                        <img src="https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg" class="responsive-img" alt="Date对象方法">
                         
-                        <span class="card-title">Markdow的使用-（基础）</span>
+                        <span class="card-title">Date对象方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Date对象方法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Blog/" class="post-category">
-                                    Blog
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
                                 </a>
                             
                             
@@ -983,12 +985,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Blog/">
-                        <span class="chip bg-color">Blog</span>
+                    <a href="/tags/Date/">
+                        <span class="chip bg-color">Date</span>
                     </a>
                     
-                    <a href="/tags/Markdow/">
-                        <span class="chip bg-color">Markdow</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
