@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>测试</title>
+      <link href="2021/03/05/blog-js-2/"/>
+      <url>2021/03/05/blog-js-2/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;  #文章标题</span><br><span class="line">date: &#123;&#123; date &#125;&#125;    #文件创建时间</span><br><span class="line">author:             #文章作者</span><br><span class="line">img: 直接填链接      #文章封面图</span><br><span class="line">coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片</span><br><span class="line">top: false          #文章是否置顶</span><br><span class="line">cover: false        #表示该文章是否需要加入到首页轮播封面中</span><br><span class="line">toc: true           #约束</span><br><span class="line">mathjax: false      #是否开启数学公式支持</span><br><span class="line">password:           #设置阅读文章验证密码 不填写默认没有</span><br><span class="line">summary:            #自定义的文章摘要内容 不填写则为文章首内容 </span><br><span class="line">categories:         #文章分类 只能写一个</span><br><span class="line">tags:               #文章标签 能写多个</span><br><span class="line">    -文章标签1</span><br><span class="line">    -文章标签2</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Blog </tag>
+            
+            <tag> Markdow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>blog</title>
       <link href="2021/02/17/blog-1/"/>
       <url>2021/02/17/blog-1/</url>
