@@ -490,20 +490,20 @@
                 
                 
                 
-                <a href="/categories/Blog/" title="Blog: 5">
+                <a href="/categories/Blog/" title="Blog: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #F9EBEA;">Blog
-                        <span class="tag-length">5</span>
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/JavaScript/" title="JavaScript: 2">
+                <a href="/categories/JavaScript/" title="JavaScript: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F5EEF8;">JavaScript
-                        <span class="tag-length">2</span>
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
@@ -527,55 +527,6 @@
                             <img src="https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg" class="responsive-img" alt="测试2">
                             
                             <span class="card-title">测试2</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                123456789101112131415title: &#123;&#123; title &#125;&#125;  #文章标题date: &#123;&#123; date &#125;&#125;    #文件创建时间author:
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Blog/" class="post-category">
-                                    Blog
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Blog/">
-                            <span class="chip bg-color">Blog</span>
-                        </a>
-                        
-                        <a href="/tags/Markdow/">
-                            <span class="chip bg-color">Markdow</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/03/05/blog-js-2/">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg" class="responsive-img" alt="测试">
-                            
-                            <span class="card-title">测试</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
@@ -828,88 +779,103 @@
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-    
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
-            
-            <span id="year">2019</span>
-            <a href="/about" target="_blank">overWhat</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2k</span>&nbsp;字
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2019";
-                    var startMonth = "6";
-                    var startDate = "26";
-                    var startHour = "13";
-                    var startMinute = "14";
-                    var startSecond = "20";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+                <div class="container row center-align"
+                    style="margin-bottom: 15px !important;">
+                    <div class="col s12 m8 l8 copy-right">
+                        Copyright&nbsp;&copy;
+                        
+                            <span id="year">
+                                2019-2021
+                            </span>
+                            
+                                    <span id="year">
+                                        2019
+                                    </span>
+                                    <a href="/about" target="_blank">
+                                        overWhat
+                                    </a>
+                                    |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+                                    |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery"
+                                        target="_blank">Matery</a>
+                                    <br>
+                                    
+                                        &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                                            class="white-color">
+                                            4.1k
+                                        </span>&nbsp;字
+                                        
+                                            
+                                                
+                                                    
+                                                        
+                                                            
+                                                                <span id="busuanzi_container_site_pv">
+                                                                    |&nbsp;<i
+                                                                        class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span
+                                                                        id="busuanzi_value_site_pv"
+                                                                        class="white-color"></span>&nbsp;次
+                                                                </span>
+                                                                
+                                                                    
+                                                                        <span id="busuanzi_container_site_uv">
+                                                                            |&nbsp;<i
+                                                                                class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span
+                                                                                id="busuanzi_value_site_uv"
+                                                                                class="white-color"></span>&nbsp;人
+                                                                        </span>
+                                                                        
+                                                                            <br>
+                                                                            
+                                                                                <span id="sitetime">载入运行时间...</span>
+                                                                                <script>
+                                                                                    function siteTime() {
+                                                                                        var seconds = 1000;
+                                                                                        var minutes = seconds * 60;
+                                                                                        var hours = minutes * 60;
+                                                                                        var days = hours * 24;
+                                                                                        var years = days * 365;
+                                                                                        var today = new Date();
+                                                                                        var startYear = "2019";
+                                                                                        var startMonth = "6";
+                                                                                        var startDate = "26";
+                                                                                        var startHour = "13";
+                                                                                        var startMinute = "14";
+                                                                                        var startSecond = "20";
+                                                                                        var todayYear = today.getFullYear();
+                                                                                        var todayMonth = today.getMonth() + 1;
+                                                                                        var todayDate = today.getDate();
+                                                                                        var todayHour = today.getHours();
+                                                                                        var todayMinute = today.getMinutes();
+                                                                                        var diffYears = Math.floor(diff / years);
+                                                                                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                            minutes);
+                                                                                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                        var todaySecond = today.getSeconds();
+                                                                                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                                        var diff = t2 - t1;
+                                                                                        diffMinutes * minutes) / seconds);
+                                                                                        if (startYear == todayYear) {
+                                                                                            document.getElementById("year").innerHTML = todayYear;
+                                                                                            document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                                " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                                        } else {
+                                                                                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                            document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                                " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                                        }
+                                                                                    }
+                                                                                    setInterval(siteTime, 1000);
+                                                                                </script>
+                                                                                
+                                                                                    <br>
+                                                                                    
+                    </div>
+                    <div class="col s12 m4 l4 social-link social-statis">
+                        
     <a href="https://github.com/overwhatx" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -940,12 +906,12 @@
 
 
 
-</div>
-    </div>
+
+                    </div>
+                </div>
 </footer>
 
 <div class="progress-bar"></div>
-
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
