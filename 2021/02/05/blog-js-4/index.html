@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Date对象方法-练习, overwhat">
+    <meta name="keywords" content="获取DOM节点, overwhat">
     <meta name="description" content="人生而自由，却无往不在枷锁之中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Date对象方法-练习 | overwhat</title>
+    <title>获取DOM节点 | overwhat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -432,12 +432,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Date对象方法-练习</h1>
+                    <h1 class="description center-align post-title">获取DOM节点</h1>
                 </div>
             </div>
         </div>
@@ -553,12 +553,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Date/">
-                                <span class="chip bg-color">Date</span>
-                            </a>
-                        
                             <a href="/tags/JavaScript/">
                                 <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                            <a href="/tags/DOM/">
+                                <span class="chip bg-color">DOM</span>
                             </a>
                         
                     </div>
@@ -582,28 +582,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-02
+                    2021-02-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-02
+                    2021-03-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    613
+                    580
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -623,11 +623,67 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>编写一个函数，用于返回一个利于阅读的日期字符串格式   年 - 月 - 日 时: 分: 秒<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Time(date) &#123;</span><br><span class="line">           var year &#x3D; date.getFullYear().toString().padStart(4, 0);</span><br><span class="line">           var month &#x3D; date.getMonth().toString().padStart(2, 0);</span><br><span class="line">           var day &#x3D; date.getDate().toString().padStart(2, 0);</span><br><span class="line">           var hours &#x3D; date.getHours().toString().padStart(2, 0);</span><br><span class="line">           var minutes &#x3D; date.getMinutes().toString().padStart(2, 0);</span><br><span class="line">           var seconds &#x3D; date.getSeconds().toString().padStart(2, 0);</span><br><span class="line">           return &#96;$&#123;year&#125;-$&#123;month&#125;-$&#123;day&#125; $&#123;hours&#125;:$&#123;minutes&#125;:$&#123;seconds&#125;&#96;</span><br><span class="line">       &#125;;</span><br><span class="line">       console.log(Time(new Date()));</span><br></pre></td></tr></table></figure></li>
-<li>生日倒计时 计算用户当下距离生日时日天数 如果已过则计算明年的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getDaysToBirthday(month, day) &#123;</span><br><span class="line">           var now &#x3D; new Date();</span><br><span class="line">           var thisYear &#x3D; now.getFullYear();  &#x2F;&#x2F;调用函数获取当前年份并赋值给thisYear</span><br><span class="line">           &#x2F;&#x2F; 用户今年的生日日期</span><br><span class="line">           var birthday &#x3D; new Date(thisYear, month - 1, day);</span><br><span class="line"></span><br><span class="line">           if (birthday &lt; now) &#123;   &#x2F;&#x2F; 判断今年的生日是否已过 已过则计算明年的生日</span><br><span class="line">               birthday.setFullYear(now.getFullYear() + 1);</span><br><span class="line">           &#125;</span><br><span class="line">           var timeDec &#x3D; birthday - now;   &#x2F;&#x2F;用户生日减当前的日期得到毫秒</span><br><span class="line">           var days &#x3D; timeDec &#x2F; (24 * 60 * 60 * 1000)</span><br><span class="line">           return Math.ceil(days) &#x2F;&#x2F;向上取整 不足一天为一天</span><br><span class="line">       &#125;</span><br><span class="line">       console.log(getDaysToBirthday(6, 26));</span><br></pre></td></tr></table></figure></li>
-<li>根据系统当前的月份，输出这一个月每一天的星期<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">function print() &#123;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    var y &#x3D; now.getFullYear(); &#x2F;&#x2F;将当前年份赋值给y</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 使用巧妙的方法判断闰平年间接判断月份天数 这里没有调用判断闰平年</span><br><span class="line">    &#x2F;&#x2F; 方法：将得到的当前月加1 然后天数设置为0 这就等于上个月的最后一天 从而得知这个月有多少天</span><br><span class="line">    var m &#x3D; now.getMonth() + 1; &#x2F;&#x2F;将当前获取到的月份加1并赋值给m</span><br><span class="line"></span><br><span class="line">    var days &#x3D; new Date(y, m, 0).getDate();   &#x2F;&#x2F;含义年为y月为m日为零传给getDate()</span><br><span class="line">    &#x2F;&#x2F; console.log(y, m, days);  &#x2F;&#x2F;当前结果2021 3 31</span><br><span class="line">    for (var i &#x3D; 1; i &lt;&#x3D; days; i++) &#123;</span><br><span class="line">        &#x2F;&#x2F; console.log(&#96;$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日:星期$&#123;new Date(y, m - 1, i).getDay()&#125;&#96;);</span><br><span class="line">        console.log(&#96;$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日：星期$&#123;getDayOfWeek(y, m, i)&#125;&#96;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function getDayOfWeek(year, month, day) &#123;</span><br><span class="line">    var d &#x3D; new Date(year, month - 1, day);</span><br><span class="line">    var day &#x3D; d.getDay(); &#x2F;&#x2F;得到星期</span><br><span class="line">    &#x2F;&#x2F; 进行匹配</span><br><span class="line">    switch (day) &#123;</span><br><span class="line">        case 0:</span><br><span class="line">            return &quot;日&quot;;</span><br><span class="line">        case 1:</span><br><span class="line">            return &quot;一&quot;;</span><br><span class="line">        case 2:</span><br><span class="line">            return &quot;二&quot;;</span><br><span class="line">        case 3:</span><br><span class="line">            return &quot;三&quot;;</span><br><span class="line">        case 4:</span><br><span class="line">            return &quot;四&quot;;</span><br><span class="line">        case 5:</span><br><span class="line">            return &quot;五&quot;;</span><br><span class="line">        case 6:</span><br><span class="line">            return &quot;六&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">print();</span><br></pre></td></tr></table></figure></li>
+                <h1 id="获取DOM节点"><a href="#获取DOM节点" class="headerlink" title="获取DOM节点"></a>获取DOM节点</h1><p>获取dom对象</p>
+<blockquote>
+<p>全局对象 window 中有属性document，代表的是整个文档节点</p>
+</blockquote>
+<h2 id="旧的获取元素节点的方式"><a href="#旧的获取元素节点的方式" class="headerlink" title="旧的获取元素节点的方式"></a>旧的获取元素节点的方式</h2><blockquote>
+<p>DOM 0 版本</p>
+</blockquote>
+<ul>
+<li>document.body：获取body元素节点</li>
+<li>document.head：获取head元素节点</li>
+<li>document.links：获取页面上所有的超链接元素节点，类数组</li>
+<li>document.anchors：获取页面上所有的锚链接(具有name属性)元素节点</li>
+<li>document.forms：获取页面中所有的form元素节点</li>
+</ul>
+<h2 id="新的获取元素节点的方式"><a href="#新的获取元素节点的方式" class="headerlink" title="新的获取元素节点的方式"></a>新的获取元素节点的方式</h2><blockquote>
+<p>consele.dir(document.getElementById(“id”)); 查看对象</p>
+</blockquote>
+<h3 id="通过方法获取"><a href="#通过方法获取" class="headerlink" title="通过方法获取"></a>通过方法获取</h3><ul>
+<li>document.getElementById：通过id获取对应id的元素</li>
+<li>document.getElementsByTagName: 通过元素名称获取元素</li>
+<li>document.getElementsByClassName：通过元素的类样式获取元素，IE9以下无效</li>
+<li>document.getElementsByName：通过元素的name属性值获取元素</li>
+<li>document.querySelector：通过CSS选择器获取元素，得到匹配的第一个，可以选择嵌套的css类名 IE8以下无效 </li>
+<li>document.querySelectorAll：通过CSS选择器获取元素，得到所有匹配的结果，可以选择嵌套的css类名 IE8以下无效</li>
+<li>document.documentElement: 获取根元素</li>
+</ul>
+<p>细节：</p>
+<ol>
+<li>在所有的得到类数组的方法中，除了querySelectorAll，其他的方法都是实时更新的。</li>
+<li>getElementById 得到元素执行效率最高。</li>
+<li>书写了id的元素，会自动成为window对象的属性。它是一个实时的单对象。事实上的标准。不推荐使用。</li>
+<li>getElementsByTagName、getElementsByClassName、querySelector、querySelectorAll，可以作为其他元素节点对象的方法使用</li>
 </ol>
+<h3 id="根据节点关系获取节点"><a href="#根据节点关系获取节点" class="headerlink" title="根据节点关系获取节点"></a>根据节点关系获取节点</h3><blockquote>
+<p>这一块节点只作为了解 </p>
+</blockquote>
+<ul>
+<li><strong>parentNode</strong>：获取父节点（元素、文档）</li>
+<li>previousSibling：获取上一个兄弟节点   （空格注释字符 都为节点）</li>
+<li>nextSibling：获取下一个兄弟节点</li>
+<li>childNodes：获取所有的子节点</li>
+<li>firstChild：获取第一个子节点</li>
+<li>lastChild：获取最后一个子节点</li>
+<li>attributes: 获取某个元素的属性节点</li>
+</ul>
+<blockquote>
+<p>重点使用下面的元素节点<br>获取元素节点</p>
+</blockquote>
+<ul>
+<li>parentElement：获取父元素</li>
+<li>previousElementSibling：获取上一个兄弟元素</li>
+<li>nextElementSibling：获取下一个兄弟元素</li>
+<li>children：获取子元素</li>
+<li>firstElementChild：获取第一个子元素</li>
+<li>lastElementChild：获取最后一个子元素</li>
+</ul>
+<h2 id="获取节点信息"><a href="#获取节点信息" class="headerlink" title="获取节点信息"></a>获取节点信息</h2><ul>
+<li>nodeName：获取节点名称</li>
+<li>nodeValue：获取节点的值</li>
+<li>nodeType：节点类型，是一个数字</li>
+</ul>
 
                 
             </div>
@@ -654,7 +710,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://overwhatx.github.io/2021/02/02/blog-js-1/">https://overwhatx.github.io/2021/02/02/blog-js-1/</a>
+                    <a href="https://overwhatx.github.io/2021/02/05/blog-js-4/">https://overwhatx.github.io/2021/02/05/blog-js-4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -692,12 +748,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Date/">
-                                    <span class="chip bg-color">Date</span>
-                                </a>
-                            
                                 <a href="/tags/JavaScript/">
                                     <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/DOM/">
+                                    <span class="chip bg-color">DOM</span>
                                 </a>
                             
                         </div>
@@ -868,7 +924,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-02-02T22-58-26',
+        id: '2021-02-05T21-50-26',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -900,12 +956,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/03/blog-js-2/">
+                <a href="/2021/02/06/blog-js-5/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg" class="responsive-img" alt="RegExp正则表达式">
                         
-                        <span class="card-title">RegExp正则表达式</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="DOM元素操作">
+                        
+                        <span class="card-title">DOM元素操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -916,7 +973,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-06
                         </span>
                         <span class="publish-author">
                             
@@ -937,8 +994,8 @@
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                    <a href="/tags/RegExp%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                        <span class="chip bg-color">RegExp正则表达式</span>
+                    <a href="/tags/DOM/">
+                        <span class="chip bg-color">DOM</span>
                     </a>
                     
                 </div>
@@ -952,30 +1009,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/02/blog-js/">
+                <a href="/2021/02/04/blog-js-3/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg" class="responsive-img" alt="Date对象方法">
                         
-                        <span class="card-title">Date对象方法</span>
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="web Api概述">
+                        
+                        <span class="card-title">web Api概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Date对象方法
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                            <a href="/categories/Blog/" class="post-category">
+                                    Blog
                                 </a>
                             
                             
@@ -985,12 +1043,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Date/">
-                        <span class="chip bg-color">Date</span>
-                    </a>
-                    
                     <a href="/tags/JavaScript/">
                         <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/DOM/">
+                        <span class="chip bg-color">DOM</span>
+                    </a>
+                    
+                    <a href="/tags/Api/">
+                        <span class="chip bg-color">Api</span>
                     </a>
                     
                 </div>

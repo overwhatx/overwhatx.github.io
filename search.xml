@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>测试2</title>
-      <link href="2021/03/05/blog-js-3/"/>
-      <url>2021/03/05/blog-js-3/</url>
+      <title>Hexo-新建文章模板</title>
+      <link href="2021/03/09/hexo-note/"/>
+      <url>2021/03/09/hexo-note/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;  #文章标题</span><br><span class="line">date: &#123;&#123; date &#125;&#125;    #文件创建时间</span><br><span class="line">author:             #文章作者</span><br><span class="line">img: 直接填链接      #文章封面图</span><br><span class="line">coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片</span><br><span class="line">top: false          #文章是否置顶</span><br><span class="line">cover: false        #表示该文章是否需要加入到首页轮播封面中</span><br><span class="line">toc: true           #约束</span><br><span class="line">mathjax: false      #是否开启数学公式支持</span><br><span class="line">password:           #设置阅读文章验证密码 不填写默认没有</span><br><span class="line">summary:            #自定义的文章摘要内容 不填写则为文章首内容 </span><br><span class="line">categories:         #文章分类 只能写一个</span><br><span class="line">tags:               #文章标签 能写多个</span><br><span class="line">    -文章标签1</span><br><span class="line">    -文章标签2</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="新建文章模板含义"><a href="#新建文章模板含义" class="headerlink" title="新建文章模板含义:"></a>新建文章模板含义:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;  #文章标题</span><br><span class="line">date: &#123;&#123; date &#125;&#125;    #文件创建时间</span><br><span class="line">author:             #文章作者</span><br><span class="line">img: 直接填链接      #文章封面图</span><br><span class="line">coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片</span><br><span class="line">top: false          #文章是否置顶</span><br><span class="line">cover: false        #表示该文章是否需要加入到首页轮播封面中</span><br><span class="line">toc: true           #约束</span><br><span class="line">mathjax: false      #是否开启数学公式支持</span><br><span class="line">password:           #设置阅读文章验证密码 不填写默认没有</span><br><span class="line">summary:            #自定义的文章摘要内容 不填写则为文章首内容 </span><br><span class="line">categories:         #文章分类 只能写一个</span><br><span class="line">tags:               #文章标签 能写多个</span><br><span class="line">    -文章标签1</span><br><span class="line">    -文章标签2</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -23,33 +23,6 @@
             <tag> Blog </tag>
             
             <tag> Markdow </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>RegExp正则表达式</title>
-      <link href="2021/03/05/blog-js-2/"/>
-      <url>2021/03/05/blog-js-2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><a id="more"></a><p>正则表达式是国际标准，跨越语言</p><p>正则表达式是一个规则，用于验证字符串。</p><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ol><li>字面量匹配</li></ol><p>规则中直接书写字面量字符</p><ol start="2"><li><p>特殊字符</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.   匹配除换行符 \n 之外的所有单字符。要匹配 . ，请使用 \. </span><br><span class="line">...a... 释义 匹配a前和a后都必须要有3个字符的</span><br><span class="line"></span><br><span class="line">^   匹配输入字符串的开始位置，除非在方括号表达式中使用，当该符号在方括号表达式中使用时，表示不接受该方括号表达式中的字符集合。要匹配 ^ 字符本身，请使用 \^。</span><br><span class="line">^abc... 释义 匹配输入字符串的开始位置为abc且后面接有3个字符 注意只匹配开始位置的其他位置匹配不成功</span><br><span class="line"></span><br><span class="line">$   匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 &#39;\n&#39; 或 &#39;\r&#39;。要匹配 $ 字符本身，请使用 \$。</span><br><span class="line">^abc...&amp; 释义：匹配输入字符串的开始位置为abc且后面接有3个字符后就结束 （限定为6位数，多一位就不在匹配）</span><br><span class="line"></span><br><span class="line">? 匹配前面的一次或者0次</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>转义符</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\n  匹配一个换行符</span><br><span class="line">\r  匹配一个回车符</span><br><span class="line">\t  匹配一个制表符</span><br><span class="line">\s  匹配一个空白字符</span><br><span class="line">\S  匹配一个除空白字符以外的所有字符</span><br><span class="line">\b  匹配一个字符串的边界 （字符串开始和结束都是边界 空格 换行 制表符都是边界）</span><br><span class="line">\B  非单词边界匹配</span><br><span class="line">\d  匹配一个数字字符 [0~9] 例：^1\d\d\d\d\d\d\d\d\d\d$ 以1开头的十一位数的号码</span><br><span class="line">\D  匹配一非个数字字符</span><br><span class="line">\w  匹配字母、数字、下划线。等价于&#39;[A-Za-z0-9_]&#39;</span><br><span class="line">\W  匹配非字母、数字、下划线。</span><br><span class="line">\u  Unicode 字符转换匹配 \u4f60\u771f\u68d2&#x3D;你真棒 </span><br></pre></td></tr></table></figure><ol><li>字符集</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[字符范围]  分别匹配字符范围内的一个字符 </span><br><span class="line">[^0-9] 释义：匹配除0到9之间以外的字符 &#x3D;\D*</span><br><span class="line">匹配所有字符：</span><br><span class="line">    [\d\D]+ 释义：匹配所有数字字符和非数字字符 至少1个</span><br><span class="line">    [\s\S]+</span><br></pre></td></tr></table></figure><p>[a-z] [a-zA-Z] [0-9] [A-Za-z0-9_]范围可以随意组合</p><p>匹配中文： <code>[\u4e00-\u9FA5]</code> 汉字unicode编码范围</p><ol start="5"><li>量词</li></ol><p><strong>指定是（前面）的规则出现的次数</strong> 量词前最近的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">单纯匹配本身时例如 + 时需要在其前面 加一个 \ 其他符号同理</span><br><span class="line"></span><br><span class="line">*   匹配前面的子表达式零次或多次</span><br><span class="line">+   至少匹配一个或者多个 例：\d+ 释义：至少匹配到一个数字</span><br><span class="line">?   匹配零个或者1个</span><br><span class="line">&#123;n&#125;: 匹配n个</span><br><span class="line">&#123;n,&#125;: 匹配&gt;&#x3D;n个</span><br><span class="line">&#123;n,m&#125;: 匹配n-m个</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例1：匹配6-16位的密码   ^[0-9a-zA-Z]&#123;6,16&#125;$ 释义：匹配范围[0到9 a到z A到Z]6到16位数的字符</span><br><span class="line">例2: 匹配2到6位的中文名字 ^[\u4e00-\u9FA5]&#123;2,6&#125;$</span><br></pre></td></tr></table></figure><ol start="6"><li>或者<br>多个规则之间，适用或者 <code>|</code>,表示多个规则任选其一</li></ol><h2 id="JS中的应用"><a href="#JS中的应用" class="headerlink" title="JS中的应用"></a>JS中的应用</h2><p>js中，正则表达式表现为一个对象，该对象是通过构造函数RegExp</p><h3 id="创建正则对象"><a href="#创建正则对象" class="headerlink" title="创建正则对象"></a>创建正则对象</h3><ol><li>字面量模式<br><code>var reg1 = /^-?\d+(\.0+)?$/;</code></li><li>构造函数模式<br> <code> var reg2 = new RegExp(&quot;^-?\d+(\.0+)?$&quot;)</code></li><li>直接调用<br> <code>RegExp(&quot;^-?\d+(\.0+)?$&quot;);</code><br> <strong>注意构造函数模式和直接调用是两种不同的创建方式区别：当二者不是直接书写的正则 而是调用的正则构造函数创建的是一个新地址，而直接调用的使用的还是原来的地址</strong></li></ol><h3 id="参数-这三者默认是关闭的"><a href="#参数-这三者默认是关闭的" class="headerlink" title="参数 这三者默认是关闭的"></a>参数 这三者默认是关闭的</h3><p><strong>开启.书写位置正则后面 //g、i、m</strong><br>g 全局匹配 找到所有匹配的<br>i 忽略大小写<br>m 多行匹配 匹配每一行的开始和结束(^和$)</p><h3 id="正则实例成员"><a href="#正则实例成员" class="headerlink" title="正则实例成员"></a>正则实例成员</h3><ul><li><p>global        是否开启了全局搜索 只读属性</p></li><li><p>ignoreCase    是否开启了忽略了大小写</p></li><li><p>multiline     是否开启了多行匹配</p></li><li><p>source        目前规则 得到当前正则字符串</p></li><li><p>test方法：验证某个字符串是否满足规则<br> test()函数 判断一个字符串是否匹配 并且在全局匹配模式下影响下一次匹配的位置<br> 结论：开启了全局匹配情况下 第一次匹配成功后索引号会停留在上一次匹配成功的字符上<br> 当连续进行下一次匹配时会从上一次匹配成功结束的索引开始匹配后面的字符，<br> 后面没有可匹配的那就判断为false 在下一次匹配时 重头开始匹配。<br> 没开启全局匹配不会记录索引每次都是重新匹配并只匹配一个.</p></li><li><p>exec方法：execute，执行匹配，得到匹配结果。</p></li></ul><blockquote><p>正则表达式，默认情况下，适用贪婪模式<br>在量词后，加上?，表示进入非贪婪模式（把？当为量词时含义是匹配0次或1次 把？写于量词后表示非贪婪模式）</p></blockquote><h3 id="字符串对象中的正则方法"><a href="#字符串对象中的正则方法" class="headerlink" title="字符串对象中的正则方法"></a>字符串对象中的正则方法</h3><ul><li>split 用于把一个字符串分割成字符串数组 第二个参数设定分割数量，默认全分割</li><li>replace 替换与正则表达式匹配的字符 参数一为正则表达式 参数二为替换数据同时也可以写函数</li><li>search 在给定字符串中搜索匹配项，并返回在字符串中找到字符的索引号永远是只找第一匹配的，全局非全局下作用相同</li><li>match 对给定字符串执行匹配并返回匹配结果</li></ul><h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h3 id="捕获组"><a href="#捕获组" class="headerlink" title="捕获组"></a>捕获组</h3><p>(1): 用小括号包裹的部分叫做捕获组，捕获组会出现在匹配结果中 每一个小括号为一个捕获组 嵌套根据实际情况看<br>    在正则表达式中，使用某个捕获组，使用方法：<code>\捕获组编号</code></p><p>(2):捕获组可以命名，叫做具名捕获组(命名捕获组) <code>在小括号中前面写入 ?&lt;命名&gt;</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var p &#x3D; &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;</span><br><span class="line">       var regs &#x3D; &#x2F;(?&lt;year&gt;\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line">       while (result &#x3D; regs.exec(p)) &#123;</span><br><span class="line">           &#x2F;&#x2F; console.log(result);</span><br><span class="line">           &#x2F;&#x2F; 0--是整个捕获组       捕获组1       捕获组2     捕获组3</span><br><span class="line">           console.log(result.groups);</span><br><span class="line">           console.log(result[0], result.groups.year, result.groups.month, result.groups.day);</span><br><span class="line">       &#125;</span><br><span class="line">       &#x2F;&#x2F; 下面为输出释义</span><br><span class="line">       &#x2F;*</span><br><span class="line">           0: &quot;2ah&quot;   这里是所有匹配值</span><br><span class="line">           1: &quot;2a&quot;    这里是小括号捕获组</span><br><span class="line">           groups:     记录命名的捕获组 叫做 (具名捕获组)</span><br><span class="line">       *&#x2F;</span><br><span class="line">       </span><br></pre></td></tr></table></figure><p>(3):非捕获组  捕获组是默认是开启的 会占用资源浪费执行效率 关闭捕获方法：在小括号中前面写入 ?:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; var p &#x3D; &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;</span><br><span class="line">&#x2F;&#x2F; &#x2F;&#x2F; 年不会被捕获了 只会匹配输出</span><br><span class="line">&#x2F;&#x2F; var regs &#x3D; &#x2F;(?:\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line">&#x2F;&#x2F; while (result &#x3D; regs.exec(p)) &#123;</span><br><span class="line">&#x2F;&#x2F;     &#x2F;&#x2F; 0--是整个捕获组       捕获组1       捕获组2     捕获组3</span><br><span class="line">&#x2F;&#x2F;     console.log(result[0], result.groups.year, result.groups.month, result.groups.day);</span><br><span class="line">&#x2F;&#x2F;     console.log(result.groups);</span><br><span class="line">&#x2F;&#x2F; &#125;</span><br></pre></td></tr></table></figure><p><strong>了解</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方法replace()--替换 也可以使用捕获组 例题：把一个日期中的横杠换成斜杠 但两个日期间的符号不改变</span><br><span class="line"></span><br><span class="line">       var p &#x3D; &quot;2020-6-26,-2020-5-1,2020-11-2,-2020-11-15&quot;;</span><br><span class="line">       var regs &#x3D; &#x2F;(\d&#123;4&#125;)-(\d&#123;1,2&#125;)-(\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line"></span><br><span class="line">       &#x2F;&#x2F;   方法1.   function 1值匹配结果,后面的值表示捕获组</span><br><span class="line">       &#x2F;&#x2F; p &#x3D; p.replace(regs, function (match, g1, g2, g3) &#123;</span><br><span class="line">       &#x2F;&#x2F;     console.log(match, g1, g2, g3);</span><br><span class="line">       &#x2F;&#x2F;     </span><br><span class="line">       &#x2F;&#x2F;     return &#96;$&#123;g1&#125;&#x2F;$&#123;g2&#125;&#x2F;$&#123;g3&#125;&#96;</span><br><span class="line">       &#x2F;&#x2F; &#125;);</span><br><span class="line"></span><br><span class="line">       &#x2F;&#x2F; 方法2. 使用特殊符号 &#x2F;$1 表示捕获组1 $1前后添加数据为替换值</span><br><span class="line">       p &#x3D; p.replace(regs, &quot;&#x2F;$1&#x2F;$2&#x2F;$3&quot;);</span><br><span class="line">       console.log(p);</span><br></pre></td></tr></table></figure><h3 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h3><p>释义：重复正则匹配上一次的匹配结果满足该要求才为匹配项</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;例题：</span><br><span class="line"> var reg &#x3D; &#x2F;(\d&#123;2&#125;)\1&#x2F;; &#x2F;&#x2F;释义： 匹配两个数字并重复一次的</span><br><span class="line">        var s &#x3D; &quot;1212&quot;;</span><br><span class="line">        var s2 &#x3D; &quot;1213&quot;</span><br><span class="line">        console.log(reg.test(s));  &#x2F;&#x2F;true</span><br><span class="line">        &#x2F;&#x2F; console.log(reg.test(s2));  &#x2F;&#x2F;false</span><br></pre></td></tr></table></figure><h3 id="正向断言-预查"><a href="#正向断言-预查" class="headerlink" title="正向断言(预查)"></a>正向断言(预查)</h3><p>检查某个字符后面的字符是否满足某个规则，该规则不成为匹配结果，并且不称为捕获组</p><h3 id="负向断言-预查"><a href="#负向断言-预查" class="headerlink" title="负向断言(预查)"></a>负向断言(预查)</h3><p>检查某个字符后面的字符是否不满足某个规则，该规则不成为匹配结果，并且不称为捕获组</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> RegExp正则表达式 </tag>
             
         </tags>
       
@@ -86,10 +59,37 @@
     
     <entry>
       <title>Markdow的使用-（基础）</title>
-      <link href="2021/02/17/blog/"/>
-      <url>2021/02/17/blog/</url>
+      <link href="2021/02/17/blog-markdow/"/>
+      <url>2021/02/17/blog-markdow/</url>
       
         <content type="html"><![CDATA[<h1 id="markdow的基础用法："><a href="#markdow的基础用法：" class="headerlink" title="markdow的基础用法："></a>markdow的基础用法：</h1><h2 id="图片引入方法"><a href="#图片引入方法" class="headerlink" title="图片引入方法"></a>图片引入方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](填写图片url) 图片描述可以不写</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdow </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Blog </tag>
+            
+            <tag> Markdow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js-6测试</title>
+      <link href="2021/02/07/blog-js-6/"/>
+      <url>2021/02/07/blog-js-6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="新建文章模板含义"><a href="#新建文章模板含义" class="headerlink" title="新建文章模板含义:"></a>新建文章模板含义:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;  #文章标题</span><br><span class="line">date: &#123;&#123; date &#125;&#125;    #文件创建时间</span><br><span class="line">author:             #文章作者</span><br><span class="line">img: 直接填链接      #文章封面图</span><br><span class="line">coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片</span><br><span class="line">top: false          #文章是否置顶</span><br><span class="line">cover: false        #表示该文章是否需要加入到首页轮播封面中</span><br><span class="line">toc: true           #约束</span><br><span class="line">mathjax: false      #是否开启数学公式支持</span><br><span class="line">password:           #设置阅读文章验证密码 不填写默认没有</span><br><span class="line">summary:            #自定义的文章摘要内容 不填写则为文章首内容 </span><br><span class="line">categories:         #文章分类 只能写一个</span><br><span class="line">tags:               #文章标签 能写多个</span><br><span class="line">    -文章标签1</span><br><span class="line">    -文章标签2</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -104,6 +104,116 @@
             <tag> Blog </tag>
             
             <tag> Markdow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DOM元素操作</title>
+      <link href="2021/02/06/blog-js-5/"/>
+      <url>2021/02/06/blog-js-5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="DOM元素操作"><a href="#DOM元素操作" class="headerlink" title="DOM元素操作"></a>DOM元素操作</h1><h2 id="初识元素事件"><a href="#初识元素事件" class="headerlink" title="初识元素事件"></a>初识元素事件</h2><p>元素事件：某个元素发生一件事（被点击 click）</p><p>事件处理程序：是一个函数，发生了一件事，应该做什么事情</p><p>注册事件：将事件处理程序与某个事件关联</p><p><strong>this关键字在事件处理程序中指代当前发生的事件元素</strong></p><h2 id="获取和设置元素属性"><a href="#获取和设置元素属性" class="headerlink" title="获取和设置元素属性"></a>获取和设置元素属性</h2><ul><li>通用方式：getAttribute、setAttribute  只能得到原始值  不推荐使用</li></ul><h3 id="可识别属性"><a href="#可识别属性" class="headerlink" title="可识别属性"></a>可识别属性</h3><p>正常的HTML属性  例如：input</p><ul><li>dom对象.属性名：推荐</li></ul><p>细节：</p><ol><li>正常的属性即使没有复制，也有默认值</li><li>布尔属性在dom对象中，得到的是boolean</li><li>某些表单元素可以获取到某些不存在的属性</li><li>某些属性与标识符冲突，此时，需要更换属性名</li></ol><h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h3><p>HTML5 建议自定义属性使用<code>data-</code>作为前缀</p><p>如果遵从HTML5 自定义属性规范，可以使用<code>dom对象.dataset.属性名</code>控制属性</p><p><strong>删除自定义属性</strong></p><ul><li>removeAttribute(“属性名”);</li><li>delete dom.dataset.属性名</li></ul><h2 id="获取和设置元素内容"><a href="#获取和设置元素内容" class="headerlink" title="获取和设置元素内容"></a>获取和设置元素内容</h2><ul><li>innerHTML：获取和设置元素的内部HTML文本</li><li>innerText：获取和设置元素内部的纯文本，仅得到元素内部显示出来的文本</li><li>textContent：获取和设置元素内部的纯文本，与innerTexttext不同在于 Content得到的是内部源代码中的文本 显示源码格式</li></ul><h2 id="元素结构重构"><a href="#元素结构重构" class="headerlink" title="元素结构重构"></a>元素结构重构</h2><ul><li>父元素.appendChild(元素)：在某个元素末尾加入一个子元素</li><li>父元素.append(元素1,元素2，元素N) 在某个元素末尾加入1或多个元素（还未成为标准慎用）</li><li>父元素.insertBefore(待插入的元素, 哪个元素之前或者节点前)</li><li>父元素.replaceChild(替换的元素, 被替换的元素)</li></ul><p>细节：</p><p>更改元素结构效率较低，尽量少用。</p><h2 id="创建和删除元素"><a href="#创建和删除元素" class="headerlink" title="创建和删除元素"></a>创建和删除元素</h2><h3 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h3><ul><li><p>document.createElement(“元素名”)：创建一个元素对象</p><ul><li>document.createTextNode(“文本”)</li><li>document.createDocumentFragment(): 创建文档片段</li></ul></li><li><p>dom对象.cloneNode(是否深度克隆 true/false)：复制一个新的dom对象并返回</p></li></ul><blockquote><p>childNodes也是实时集合</p></blockquote><h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><p>从子节点列表中删除某个节点</p><ul><li>removeChild：父元素调用，传入子元素</li><li>remove：把自己删除</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>获取DOM节点</title>
+      <link href="2021/02/05/blog-js-4/"/>
+      <url>2021/02/05/blog-js-4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="获取DOM节点"><a href="#获取DOM节点" class="headerlink" title="获取DOM节点"></a>获取DOM节点</h1><p>获取dom对象</p><blockquote><p>全局对象 window 中有属性document，代表的是整个文档节点</p></blockquote><h2 id="旧的获取元素节点的方式"><a href="#旧的获取元素节点的方式" class="headerlink" title="旧的获取元素节点的方式"></a>旧的获取元素节点的方式</h2><blockquote><p>DOM 0 版本</p></blockquote><ul><li>document.body：获取body元素节点</li><li>document.head：获取head元素节点</li><li>document.links：获取页面上所有的超链接元素节点，类数组</li><li>document.anchors：获取页面上所有的锚链接(具有name属性)元素节点</li><li>document.forms：获取页面中所有的form元素节点</li></ul><h2 id="新的获取元素节点的方式"><a href="#新的获取元素节点的方式" class="headerlink" title="新的获取元素节点的方式"></a>新的获取元素节点的方式</h2><blockquote><p>consele.dir(document.getElementById(“id”)); 查看对象</p></blockquote><h3 id="通过方法获取"><a href="#通过方法获取" class="headerlink" title="通过方法获取"></a>通过方法获取</h3><ul><li>document.getElementById：通过id获取对应id的元素</li><li>document.getElementsByTagName: 通过元素名称获取元素</li><li>document.getElementsByClassName：通过元素的类样式获取元素，IE9以下无效</li><li>document.getElementsByName：通过元素的name属性值获取元素</li><li>document.querySelector：通过CSS选择器获取元素，得到匹配的第一个，可以选择嵌套的css类名 IE8以下无效 </li><li>document.querySelectorAll：通过CSS选择器获取元素，得到所有匹配的结果，可以选择嵌套的css类名 IE8以下无效</li><li>document.documentElement: 获取根元素</li></ul><p>细节：</p><ol><li>在所有的得到类数组的方法中，除了querySelectorAll，其他的方法都是实时更新的。</li><li>getElementById 得到元素执行效率最高。</li><li>书写了id的元素，会自动成为window对象的属性。它是一个实时的单对象。事实上的标准。不推荐使用。</li><li>getElementsByTagName、getElementsByClassName、querySelector、querySelectorAll，可以作为其他元素节点对象的方法使用</li></ol><h3 id="根据节点关系获取节点"><a href="#根据节点关系获取节点" class="headerlink" title="根据节点关系获取节点"></a>根据节点关系获取节点</h3><blockquote><p>这一块节点只作为了解 </p></blockquote><ul><li><strong>parentNode</strong>：获取父节点（元素、文档）</li><li>previousSibling：获取上一个兄弟节点   （空格注释字符 都为节点）</li><li>nextSibling：获取下一个兄弟节点</li><li>childNodes：获取所有的子节点</li><li>firstChild：获取第一个子节点</li><li>lastChild：获取最后一个子节点</li><li>attributes: 获取某个元素的属性节点</li></ul><blockquote><p>重点使用下面的元素节点<br>获取元素节点</p></blockquote><ul><li>parentElement：获取父元素</li><li>previousElementSibling：获取上一个兄弟元素</li><li>nextElementSibling：获取下一个兄弟元素</li><li>children：获取子元素</li><li>firstElementChild：获取第一个子元素</li><li>lastElementChild：获取最后一个子元素</li></ul><h2 id="获取节点信息"><a href="#获取节点信息" class="headerlink" title="获取节点信息"></a>获取节点信息</h2><ul><li>nodeName：获取节点名称</li><li>nodeValue：获取节点的值</li><li>nodeType：节点类型，是一个数字</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>web Api概述</title>
+      <link href="2021/02/04/blog-js-3/"/>
+      <url>2021/02/04/blog-js-3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="web-api概述"><a href="#web-api概述" class="headerlink" title="web api概述"></a>web api概述</h1><p>标准库：ECMAScript中的对象和函数</p><p>Web Api：浏览器宿主环境中的对象和函数</p><ol><li>知识繁杂</li><li>成体系的知识</li><li>程序思维：知识+程序思维 = 应用</li><li>兼容性：了解，不记忆</li></ol><p>Web Api：</p><ul><li>BOM：Browser Object Model，浏览器对象模型</li><li>DOM：Document Object Model，文档对象模型</li></ul><p>BOM：控制浏览器本身<br>DOM：控制HTML文档</p><p>ES 由 ECMAScript 规定的<br>WebApi 由 W3C（万维网联盟） 制定</p><h2 id="关于DOM"><a href="#关于DOM" class="headerlink" title="关于DOM"></a>关于DOM</h2><ul><li>DOM 0</li><li>DOM 1</li><li>DOM 2</li><li>DOM 3</li><li>DOM 4  2015年</li></ul><p><strong>DOM是什么</strong></p><p>DOM的核心理念，是将一个HTML或XML文档，用对象模型表示，每个对象称之为dom对象</p><p>dom对象又称之为节点Node</p><p>节点的类型：</p><ul><li>DocumentType，文档类型节点</li><li>Document，文档节点，表示整个文档</li><li>Comment，注释节点</li><li>Element，元素节点</li><li>Text，文本节点</li><li>Attribute，属性节点</li><li>DocumentFragment，文档片段节点</li></ul><p>dom树：文档中不同的节点形成的树形结构。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
+            
+            <tag> Api </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RegExp正则表达式</title>
+      <link href="2021/02/03/blog-js-2/"/>
+      <url>2021/02/03/blog-js-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>正则表达式是国际标准，跨越语言</p><p>正则表达式是一个规则，用于验证字符串。</p><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ol><li>字面量匹配</li></ol><p>规则中直接书写字面量字符</p><ol start="2"><li><p>特殊字符</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.   匹配除换行符 \n 之外的所有单字符。要匹配 . ，请使用 \. </span><br><span class="line">...a... 释义 匹配a前和a后都必须要有3个字符的</span><br><span class="line"></span><br><span class="line">^   匹配输入字符串的开始位置，除非在方括号表达式中使用，当该符号在方括号表达式中使用时，表示不接受该方括号表达式中的字符集合。要匹配 ^ 字符本身，请使用 \^。</span><br><span class="line">^abc... 释义 匹配输入字符串的开始位置为abc且后面接有3个字符 注意只匹配开始位置的其他位置匹配不成功</span><br><span class="line"></span><br><span class="line">$   匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 &#39;\n&#39; 或 &#39;\r&#39;。要匹配 $ 字符本身，请使用 \$。</span><br><span class="line">^abc...&amp; 释义：匹配输入字符串的开始位置为abc且后面接有3个字符后就结束 （限定为6位数，多一位就不在匹配）</span><br><span class="line"></span><br><span class="line">? 匹配前面的一次或者0次</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>转义符</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\n  匹配一个换行符</span><br><span class="line">\r  匹配一个回车符</span><br><span class="line">\t  匹配一个制表符</span><br><span class="line">\s  匹配一个空白字符</span><br><span class="line">\S  匹配一个除空白字符以外的所有字符</span><br><span class="line">\b  匹配一个字符串的边界 （字符串开始和结束都是边界 空格 换行 制表符都是边界）</span><br><span class="line">\B  非单词边界匹配</span><br><span class="line">\d  匹配一个数字字符 [0~9] 例：^1\d\d\d\d\d\d\d\d\d\d$ 以1开头的十一位数的号码</span><br><span class="line">\D  匹配一非个数字字符</span><br><span class="line">\w  匹配字母、数字、下划线。等价于&#39;[A-Za-z0-9_]&#39;</span><br><span class="line">\W  匹配非字母、数字、下划线。</span><br><span class="line">\u  Unicode 字符转换匹配 \u4f60\u771f\u68d2&#x3D;你真棒 </span><br></pre></td></tr></table></figure><ol start="4"><li>字符集</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[字符范围]  分别匹配字符范围内的一个字符 </span><br><span class="line">[^0-9] 释义：匹配除0到9之间以外的字符 &#x3D;\D*</span><br><span class="line">匹配所有字符：</span><br><span class="line">    [\d\D]+ 释义：匹配所有数字字符和非数字字符 至少1个</span><br><span class="line">    [\s\S]+</span><br></pre></td></tr></table></figure><p>[a-z] [a-zA-Z] [0-9] [A-Za-z0-9_]范围可以随意组合</p><p>匹配中文： <code>[\u4e00-\u9FA5]</code> 汉字unicode编码范围</p><ol start="5"><li>量词</li></ol><p><strong>指定是（前面）的规则出现的次数</strong> 量词前最近的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">单纯匹配本身时例如 + 时需要在其前面 加一个 \ 其他符号同理</span><br><span class="line"></span><br><span class="line">*   匹配前面的子表达式零次或多次</span><br><span class="line">+   至少匹配一个或者多个 例：\d+ 释义：至少匹配到一个数字</span><br><span class="line">?   匹配零个或者1个</span><br><span class="line">&#123;n&#125;: 匹配n个</span><br><span class="line">&#123;n,&#125;: 匹配&gt;&#x3D;n个</span><br><span class="line">&#123;n,m&#125;: 匹配n-m个</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例1：匹配6-16位的密码   ^[0-9a-zA-Z]&#123;6,16&#125;$ 释义：匹配范围[0到9 a到z A到Z]6到16位数的字符</span><br><span class="line">例2: 匹配2到6位的中文名字 ^[\u4e00-\u9FA5]&#123;2,6&#125;$</span><br></pre></td></tr></table></figure><ol start="6"><li>或者<br>多个规则之间，适用或者 <code>|</code>,表示多个规则任选其一</li></ol><h2 id="JS中的应用"><a href="#JS中的应用" class="headerlink" title="JS中的应用"></a>JS中的应用</h2><p>js中，正则表达式表现为一个对象，该对象是通过构造函数RegExp</p><h3 id="创建正则对象"><a href="#创建正则对象" class="headerlink" title="创建正则对象"></a>创建正则对象</h3><ol><li>字面量模式<br><code>var reg1 = /^-?\d+(\.0+)?$/;</code></li><li>构造函数模式<br> <code> var reg2 = new RegExp(&quot;^-?\d+(\.0+)?$&quot;)</code></li><li>直接调用<br> <code>RegExp(&quot;^-?\d+(\.0+)?$&quot;);</code><br> <strong>注意构造函数模式和直接调用是两种不同的创建方式区别：当二者不是直接书写的正则 而是调用的正则构造函数创建的是一个新地址，而直接调用的使用的还是原来的地址</strong></li></ol><h3 id="参数-这三者默认是关闭的"><a href="#参数-这三者默认是关闭的" class="headerlink" title="参数 这三者默认是关闭的"></a>参数 这三者默认是关闭的</h3><p><strong>开启.书写位置正则后面 //g、i、m</strong><br>g 全局匹配 找到所有匹配的<br>i 忽略大小写<br>m 多行匹配 匹配每一行的开始和结束(^和$)</p><h3 id="正则实例成员"><a href="#正则实例成员" class="headerlink" title="正则实例成员"></a>正则实例成员</h3><ul><li><p>global        是否开启了全局搜索 只读属性</p></li><li><p>ignoreCase    是否开启了忽略了大小写</p></li><li><p>multiline     是否开启了多行匹配</p></li><li><p>source        目前规则 得到当前正则字符串</p></li><li><p>test方法：验证某个字符串是否满足规则<br> test()函数 判断一个字符串是否匹配 并且在全局匹配模式下影响下一次匹配的位置<br> 结论：开启了全局匹配情况下 第一次匹配成功后索引号会停留在上一次匹配成功的字符上<br> 当连续进行下一次匹配时会从上一次匹配成功结束的索引开始匹配后面的字符，<br> 后面没有可匹配的那就判断为false 在下一次匹配时 重头开始匹配。<br> 没开启全局匹配不会记录索引每次都是重新匹配并只匹配一个.</p></li><li><p>exec方法：execute，执行匹配，得到匹配结果。</p></li></ul><blockquote><p>正则表达式，默认情况下，适用贪婪模式<br>在量词后，加上?，表示进入非贪婪模式（把？当为量词时含义是匹配0次或1次 把？写于量词后表示非贪婪模式）</p></blockquote><h3 id="字符串对象中的正则方法"><a href="#字符串对象中的正则方法" class="headerlink" title="字符串对象中的正则方法"></a>字符串对象中的正则方法</h3><ul><li>split 用于把一个字符串分割成字符串数组 第二个参数设定分割数量，默认全分割</li><li>replace 替换与正则表达式匹配的字符 参数一为正则表达式 参数二为替换数据同时也可以写函数</li><li>search 在给定字符串中搜索匹配项，并返回在字符串中找到字符的索引号永远是只找第一匹配的，全局非全局下作用相同</li><li>match 对给定字符串执行匹配并返回匹配结果</li></ul><h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h3 id="捕获组"><a href="#捕获组" class="headerlink" title="捕获组"></a>捕获组</h3><p>(1): 用小括号包裹的部分叫做捕获组，捕获组会出现在匹配结果中 每一个小括号为一个捕获组 嵌套根据实际情况看<br>    在正则表达式中，使用某个捕获组，使用方法：<code>\捕获组编号</code></p><p>(2):捕获组可以命名，叫做具名捕获组(命名捕获组) <code>在小括号中前面写入 ?&lt;命名&gt;</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var p &#x3D; &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;</span><br><span class="line">       var regs &#x3D; &#x2F;(?&lt;year&gt;\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line">       while (result &#x3D; regs.exec(p)) &#123;</span><br><span class="line">           &#x2F;&#x2F; console.log(result);</span><br><span class="line">           &#x2F;&#x2F; 0--是整个捕获组       捕获组1       捕获组2     捕获组3</span><br><span class="line">           console.log(result.groups);</span><br><span class="line">           console.log(result[0], result.groups.year, result.groups.month, result.groups.day);</span><br><span class="line">       &#125;</span><br><span class="line">       &#x2F;&#x2F; 下面为输出释义</span><br><span class="line">       &#x2F;*</span><br><span class="line">           0: &quot;2ah&quot;   这里是所有匹配值</span><br><span class="line">           1: &quot;2a&quot;    这里是小括号捕获组</span><br><span class="line">           groups:     记录命名的捕获组 叫做 (具名捕获组)</span><br><span class="line">       *&#x2F;</span><br><span class="line">       </span><br></pre></td></tr></table></figure><p>(3):非捕获组  捕获组是默认是开启的 会占用资源浪费执行效率 关闭捕获方法：在小括号中前面写入 ?:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; var p &#x3D; &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;</span><br><span class="line">&#x2F;&#x2F; &#x2F;&#x2F; 年不会被捕获了 只会匹配输出</span><br><span class="line">&#x2F;&#x2F; var regs &#x3D; &#x2F;(?:\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line">&#x2F;&#x2F; while (result &#x3D; regs.exec(p)) &#123;</span><br><span class="line">&#x2F;&#x2F;     &#x2F;&#x2F; 0--是整个捕获组       捕获组1       捕获组2     捕获组3</span><br><span class="line">&#x2F;&#x2F;     console.log(result[0], result.groups.year, result.groups.month, result.groups.day);</span><br><span class="line">&#x2F;&#x2F;     console.log(result.groups);</span><br><span class="line">&#x2F;&#x2F; &#125;</span><br></pre></td></tr></table></figure><p><strong>了解</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方法replace()--替换 也可以使用捕获组 例题：把一个日期中的横杠换成斜杠 但两个日期间的符号不改变</span><br><span class="line"></span><br><span class="line">       var p &#x3D; &quot;2020-6-26,-2020-5-1,2020-11-2,-2020-11-15&quot;;</span><br><span class="line">       var regs &#x3D; &#x2F;(\d&#123;4&#125;)-(\d&#123;1,2&#125;)-(\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line"></span><br><span class="line">       &#x2F;&#x2F;   方法1.   function 1值匹配结果,后面的值表示捕获组</span><br><span class="line">       &#x2F;&#x2F; p &#x3D; p.replace(regs, function (match, g1, g2, g3) &#123;</span><br><span class="line">       &#x2F;&#x2F;     console.log(match, g1, g2, g3);</span><br><span class="line">       &#x2F;&#x2F;     </span><br><span class="line">       &#x2F;&#x2F;     return &#96;$&#123;g1&#125;&#x2F;$&#123;g2&#125;&#x2F;$&#123;g3&#125;&#96;</span><br><span class="line">       &#x2F;&#x2F; &#125;);</span><br><span class="line"></span><br><span class="line">       &#x2F;&#x2F; 方法2. 使用特殊符号 &#x2F;$1 表示捕获组1 $1前后添加数据为替换值</span><br><span class="line">       p &#x3D; p.replace(regs, &quot;&#x2F;$1&#x2F;$2&#x2F;$3&quot;);</span><br><span class="line">       console.log(p);</span><br></pre></td></tr></table></figure><h3 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h3><p>释义：重复正则匹配上一次的匹配结果满足该要求才为匹配项</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;例题：</span><br><span class="line"> var reg &#x3D; &#x2F;(\d&#123;2&#125;)\1&#x2F;; &#x2F;&#x2F;释义： 匹配两个数字并重复一次的</span><br><span class="line">        var s &#x3D; &quot;1212&quot;;</span><br><span class="line">        var s2 &#x3D; &quot;1213&quot;</span><br><span class="line">        console.log(reg.test(s));  &#x2F;&#x2F;true</span><br><span class="line">        &#x2F;&#x2F; console.log(reg.test(s2));  &#x2F;&#x2F;false</span><br></pre></td></tr></table></figure><h3 id="正向断言-预查"><a href="#正向断言-预查" class="headerlink" title="正向断言(预查)"></a>正向断言(预查)</h3><p>检查某个字符后面的字符是否满足某个规则，该规则不成为匹配结果，并且不称为捕获组</p><h3 id="负向断言-预查"><a href="#负向断言-预查" class="headerlink" title="负向断言(预查)"></a>负向断言(预查)</h3><p>检查某个字符后面的字符是否不满足某个规则，该规则不成为匹配结果，并且不称为捕获组</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> RegExp正则表达式 </tag>
             
         </tags>
       
@@ -167,10 +277,10 @@
     
     <entry>
       <title>firstBlog</title>
-      <link href="2020/03/05/firstBlog/"/>
-      <url>2020/03/05/firstBlog/</url>
+      <link href="2020/02/01/firstBlog/"/>
+      <url>2020/02/01/firstBlog/</url>
       
-        <content type="html"><![CDATA[<h1 id="抒写第一篇博客"><a href="#抒写第一篇博客" class="headerlink" title="抒写第一篇博客"></a>抒写第一篇博客</h1><h2 id="新建文章模板含义"><a href="#新建文章模板含义" class="headerlink" title="新建文章模板含义:"></a>新建文章模板含义:</h2><p>title: firstBlog  #文章标题<br>date: 1583387521000    #文件创建时间<br>author:             #文章作者<br>img: 直接填链接      #文章封面图<br>coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片<br>top: false          #文章是否置顶<br>cover: false        #表示该文章是否需要加入到首页轮播封面中<br>toc: true           #约束<br>mathjax: false      #是否开启数学公式支持<br>password:           #设置阅读文章验证密码 不填写默认没有<br>summary:            #自定义的文章摘要内容 不填写则为文章首内容<br>categories:         #文章分类 只能写一个<br>tags:               #文章标签 能写多个<br>    -文章标签1<br>    -文章标签2</p><h2 id="第一篇Blog的诞生"><a href="#第一篇Blog的诞生" class="headerlink" title="第一篇Blog的诞生:"></a>第一篇Blog的诞生:</h2><p>在只学过小部分web基础上搭建了这个小破站，中途还是有些吃力，太多没有接触的知识、原理，庆幸还可以面向百度面向大佬<br>如果没有这些大佬的解惑和超时空的问答，大概我已经暂时放弃了，待到知识备全在重新开始。<br>最后经过三两天的奋战还是如愿以偿，这一刻无比激动，这一刻让我感受到了编程的多巴胺，这一刻我明白程序员为什么会猝死<br>这一刻我也松了一口气，事实证明我的编程能力也不是很差劲，我能完成或许只是因为付出了比那些大佬多几倍的时间，我只是死磕完成的，换个小白或许也比我快，但至少我实现了。<br>实现了Blog的搭建和部署，从而也学会和理解了很多零散的知识点，对以后或许没有太大作用但不积跬步何以至千里？</p><p><img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg"><br><strong>谢同学或许会偶尔怀疑自己的能力，但谢同学永远坚信明天会更好</strong></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="抒写第一篇博客"><a href="#抒写第一篇博客" class="headerlink" title="抒写第一篇博客"></a>抒写第一篇博客</h1><h2 id="第一篇Blog的诞生"><a href="#第一篇Blog的诞生" class="headerlink" title="第一篇Blog的诞生:"></a>第一篇Blog的诞生:</h2><p>在只学过小部分web基础上搭建了这个小破站，中途还是有些吃力，太多没有接触的知识、原理，庆幸还可以面向百度面向大佬<br>如果没有这些大佬的解惑和超时空的问答，大概我已经暂时放弃了，待到知识备全在重新开始。<br>最后经过三两天的奋战还是如愿以偿，这一刻无比激动，这一刻让我感受到了编程的多巴胺，这一刻我明白程序员为什么会猝死<br>这一刻我也松了一口气，事实证明我的编程能力也不是很差劲，我能完成或许只是因为付出了比那些大佬多几倍的时间，我只是死磕完成的，换个小白或许也比我快，但至少我实现了。<br>实现了Blog的搭建和部署，从而也学会和理解了很多零散的知识点，对以后或许没有太大作用但不积跬步何以至千里？</p><p><img src="https://i.loli.net/2021/02/17/txgbKumXaOGApSU.jpg"><br><strong>谢同学或许会偶尔怀疑自己的能力，但谢同学永远坚信明天会更好</strong></p>]]></content>
       
       
       <categories>
