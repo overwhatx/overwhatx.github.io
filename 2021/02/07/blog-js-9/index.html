@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DOM元素样式, overwhat">
+    <meta name="keywords" content="DOM事件-基础概念, overwhat">
     <meta name="description" content="人生而自由，却无往不在枷锁之中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DOM元素样式 | overwhat</title>
+    <title>DOM事件-基础概念 | overwhat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -437,7 +437,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DOM元素样式</h1>
+                    <h1 class="description center-align post-title">DOM事件-基础概念</h1>
                 </div>
             </div>
         </div>
@@ -596,7 +596,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    324
+                    278
                 </div>
                 
 
@@ -623,34 +623,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DOM元素样式"><a href="#DOM元素样式" class="headerlink" title="DOM元素样式"></a>DOM元素样式</h1><h2 id="控制dom元素的类样式"><a href="#控制dom元素的类样式" class="headerlink" title="控制dom元素的类样式"></a>控制dom元素的类样式</h2><blockquote>
-<p>className： 获取或设置元素的类名</p>
-</blockquote>
-<blockquote>
-<p>classList： dom4的新属性，是一个用于控制元素类名的对象 IE10以下不兼容</p>
-</blockquote>
-<ul>
-<li>classList.add：用于添加一个类名</li>
-<li>classList.remove：用于移除一个类名</li>
-<li>classList.contains：用于判断一个类名是否存在 存在某个元素中</li>
-<li>classList.toggle：用于添加/移除一个类名 <pre><code>toggle(类名,false/true) 只写类名时等于循环添加删除（点击1次为删除指定类名，第几第2次指定类名又会重新添加上）
-写两个值时false为强制删除 true强制添加 ie不支持第二个值谨慎使用
-toggle第二个值如同true=(classList.add) false=(classList.remove)
-</code></pre>
+                <h1 id="DOM事件-基础概念"><a href="#DOM事件-基础概念" class="headerlink" title="DOM事件-基础概念"></a>DOM事件-基础概念</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li><p>事件：发生一件事</p>
+</li>
+<li><p>事件类型：发生什么事情；点击、鼠标按下、鼠标抬起、鼠标移入、鼠标移出、键盘按下、键盘抬起…</p>
+</li>
+<li><p>事件处理程序：一个函数，当某件事情发生时运行。</p>
+</li>
+<li><p>事件注册：将一个事件处理程序，挂载到某个事件上。</p>
 </li>
 </ul>
-<h2 id="获取样式"><a href="#获取样式" class="headerlink" title="获取样式"></a>获取样式</h2><p><strong>CSS的短横线命名，需要转换为小驼峰命名</strong>如下<br>backgroun-color=backgroundColor</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(div.style.backgroundColor);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>dom.style：得到<strong>行内样式</strong>对象</li>
-<li>window.getComputedStyle(dom元素)：得到某个元素最终计算的样式<ul>
-<li>可以有第二个参数，用于得到某个元素的某个伪元素样式</li>
-<li>getComputedStyle(当前对象div, “当前对象的伪元素before/after”)</li>
-</ul>
-</li>
-</ul>
-<h2 id="设置样式"><a href="#设置样式" class="headerlink" title="设置样式"></a>设置样式</h2><p>dom.style.样式名 = 值</p>
-<p>！注意设置的样式会存放在行内，同时该方式只能设置为行内样式</p>
+<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>事件流：当某个事件发生的时候，哪些元素会监听到该事件发生，这些元素发生该事件的顺序。<br><img src="https://i.loli.net/2021/03/15/zCTZXKUvgYqyjSA.jpg" alt="事件流"><br><strong>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</strong></p>
+<p>微软看法：事件冒泡：先触发最里层的元素，然后再依次触发外层元素<br>网景看法：事件捕获：先触发外层的元素，然后再依次触发里面元素</p>
+<p>目前，标准规定，默认情况下，事件是冒泡的方式触发。</p>
+<p>事件源、事件目标：事件目标阶段的元素（最里层元素）</p>
+<p>事件捕获 从外到内<br>事件冒泡 从内到外</p>
 
                 
             </div>
@@ -677,7 +664,7 @@ toggle第二个值如同true=(classList.add) false=(classList.remove)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://overwhatx.github.io/2021/02/07/blog-js-6/">https://overwhatx.github.io/2021/02/07/blog-js-6/</a>
+                    <a href="https://overwhatx.github.io/2021/02/07/blog-js-9/">https://overwhatx.github.io/2021/02/07/blog-js-9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -923,12 +910,12 @@ toggle第二个值如同true=(classList.add) false=(classList.remove)
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/07/blog-js-10/">
+                <a href="/2021/02/07/blog-js-7/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM事件-事件注册中的addEventListener捕获与冒泡">
+                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM事件-基础概念">
                         
-                        <span class="card-title">DOM事件-事件注册中的addEventListener捕获与冒泡</span>
+                        <span class="card-title">DOM事件-基础概念</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -975,12 +962,13 @@ toggle第二个值如同true=(classList.add) false=(classList.remove)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/07/blog-js-8/">
+                <a href="/2021/02/06/blog-js-5/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM事件-事件注册">
                         
-                        <span class="card-title">DOM事件-事件注册</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="DOM元素操作">
+                        
+                        <span class="card-title">DOM元素操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -991,7 +979,7 @@ toggle第二个值如同true=(classList.add) false=(classList.remove)
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-06
                             </span>
                         <span class="publish-author">
                             
