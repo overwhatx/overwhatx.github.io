@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DOM事件-基础概念, overwhat">
+    <meta name="keywords" content="DOM事件-事件注册中的addEventListener捕获与冒泡, overwhat">
     <meta name="description" content="人生而自由，却无往不在枷锁之中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DOM事件-基础概念 | overwhat</title>
+    <title>DOM事件-事件注册中的addEventListener捕获与冒泡 | overwhat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -432,12 +432,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/15/T7rkuI5epOLsnGZ.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DOM事件-基础概念</h1>
+                    <h1 class="description center-align post-title">DOM事件-事件注册中的addEventListener捕获与冒泡</h1>
                 </div>
             </div>
         </div>
@@ -582,7 +582,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-07
+                    2021-02-26
                 </div>
                 
 
@@ -596,14 +596,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    478
+                    921
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -623,25 +623,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DOM事件-基础概念"><a href="#DOM事件-基础概念" class="headerlink" title="DOM事件-基础概念"></a>DOM事件-基础概念</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
-<li><p>事件：发生一件事</p>
-</li>
-<li><p>事件类型：发生什么事情；点击、鼠标按下、鼠标抬起、鼠标移入、鼠标移出、键盘按下、键盘抬起…</p>
-</li>
-<li><p>事件处理程序：一个函数，当某件事情发生时运行。</p>
-</li>
-<li><p>事件注册：将一个事件处理程序，挂载到某个事件上。</p>
-</li>
-</ul>
-<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>事件流：当某个事件发生的时候，哪些元素会监听到该事件发生，这些元素发生该事件的顺序。<br><img src="https://i.loli.net/2021/03/15/zCTZXKUvgYqyjSA.jpg" alt="事件流"><br><strong>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span></span><br><span class="line">        点击我</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 给button注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;button&quot;</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;button&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给div注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;div&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给body注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;body&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给html注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.documentElement.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;html&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给整个文档注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;document&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>以上输出的结果依次为button&gt;div&gt;body&gt;html&gt;document<br>事件流的演示  运行顺序（默认情况下）：冒泡方式触发-从里到外<br>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</p>
-<p>微软看法：事件冒泡：先触发最里层的元素，然后再依次触发外层元素<br>网景看法：事件捕获：先触发外层的元素，然后再依次触发里面元素</p>
-<blockquote>
-<p>目前，标准规定，默认情况下，事件是冒泡的方式触发。</p>
+                <h1 id="详解addEventListener-捕获与冒泡"><a href="#详解addEventListener-捕获与冒泡" class="headerlink" title="详解addEventListener() 捕获与冒泡"></a>详解addEventListener() 捕获与冒泡</h1><p><strong>这篇笔记存在未证实的知识待处理（目标阶段的捕获和冒泡是否有用问题）</strong></p>
+<h2 id="addEventListener的三个值"><a href="#addEventListener的三个值" class="headerlink" title="addEventListener的三个值"></a>addEventListener的三个值</h2><blockquote>
+<p>1值 事件名称（事件类型）注意不加on<br>2值 处理函数 可以写多个处理程序<br>3值 使用时true表示在捕获阶段触发 默认为false 为冒泡阶段触发</p>
 </blockquote>
-<p>事件源、事件目标：事件目标阶段的元素（最里层元素）</p>
-<p><strong>事件捕获 从外到内</strong><br><strong>事件冒泡 从内到外</strong></p>
+<h2 id="在最底层（目标阶段）上一层-添加addEventListen的第三个值"><a href="#在最底层（目标阶段）上一层-添加addEventListen的第三个值" class="headerlink" title="在最底层（目标阶段）上一层 添加addEventListen的第三个值"></a>在最底层（目标阶段）上一层 添加addEventListen的第三个值</h2><blockquote>
+<p>以下运行结果为:div捕获&gt;btn1&gt;btn2&gt;btn3&gt;div冒泡<br>如果该div不添加第三个值 运行结果为：btn1&gt;btn2&gt;btn3&gt;div捕获&gt;div冒泡 </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- html代码： --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;btn1&quot;</span>&gt;</span>点击1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js代码：</span></span><br><span class="line"><span class="comment">// 得到button并给button注册点击事件 同时写入多个处理事件</span></span><br><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">&quot;btn1&quot;</span>);</span><br><span class="line">btn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//处理程序1</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;btn1&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">btn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  <span class="comment">//处理程序2</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;btn2&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  <span class="comment">//处理程序3</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;btn3&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 给button父级div注册点击事件 同时写入多个处理事件</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).addEventListen(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//处理程序4</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;div 捕获&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).addEventListen(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//处理程序5</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;div 冒泡&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="当在目标阶段使用捕获和冒泡"><a href="#当在目标阶段使用捕获和冒泡" class="headerlink" title="当在目标阶段使用捕获和冒泡"></a>当在目标阶段使用捕获和冒泡</h2><blockquote>
+<p>运行规则：<br>目标阶段中有处理程序设置为（捕获）true 那么会先运行该处理程序<br>注意1 只会在目标阶段内最前面运行 不会跑到外层（如父级以上）<br>注意2 如果在同一阶段有多个处理程序同设置为（捕获）true 那么会按照注册顺序依次执行<br>以下运行结果为：div捕获&gt;btn2&gt;btn3&gt;btn1&gt;div冒泡   浏览器 google Edge 有效</p>
+</blockquote>
+<blockquote>
+<p>如果不是以上结果那么以上运行规则全作废 火狐 IE浏览器中 目标阶段（最里层）不存在捕获和冒泡 执行规则为注册先后<br>运行结果为：div捕获&gt;btn1&gt;btn2&gt;btn3&gt;div冒泡</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//处理程序1</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;btn1&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line">btn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  <span class="comment">//处理程序2</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;btn2&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line">btn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  <span class="comment">//处理程序3</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;btn3&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).addEventListen(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//处理程序4</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;div1 捕获&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).addEventListen(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//处理程序5</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;div2 冒泡&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>默认运行规则为 冒泡规则 从里层到外层<br>设为捕获规则时 捕获规则 从外层到里层</li>
+<li>执行多个同一元素事件时，按照注册顺序执行<br>执行不同的元素事件时，按照事件流的顺序执行（默认情况为冒泡）</li>
+<li>阶段之间不会逾越<br>例如：有两个嵌套div 父级为div1子级为div2 两者都设为捕获 即使子级注册在前但最先执行的还是父级<br>该前提是在带有层级关系并同时都设置了捕获的情况下的规则<br>父级未设置捕获下 按照默认情况冒泡规则运行，最先运行的是子级运行完子级内所有的程序才会执行父级</li>
+<li>在目标阶段（最里层）使用冒泡和捕获要看使用的浏览器<br>当前测试结果为：在google、Edge运行可以。 火狐、IE运行目标阶段只按照注册顺序执行 捕获冒泡无效果</li>
+</ol>
 
                 
             </div>
@@ -668,7 +672,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://overwhatx.github.io/2021/02/07/blog-js-7/">https://overwhatx.github.io/2021/02/07/blog-js-7/</a>
+                    <a href="https://overwhatx.github.io/2021/02/26/blog-js-10/">https://overwhatx.github.io/2021/02/26/blog-js-10/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -882,7 +886,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-02-07T21-50-26',
+        id: '2021-02-26T21-54-26',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -914,12 +918,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/07/blog-js-8/">
+                <a href="/2021/03/09/hexo-note/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM事件-事件注册">
                         
-                        <span class="card-title">DOM事件-事件注册</span>
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Hexo-新建文章模板">
+                        
+                        <span class="card-title">Hexo-新建文章模板</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -930,14 +935,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                            <a href="/categories/Blog/" class="post-category">
+                                    Blog
                                 </a>
                             
                             
@@ -947,12 +952,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/Blog/">
+                        <span class="chip bg-color">Blog</span>
                     </a>
                     
-                    <a href="/tags/DOM/">
-                        <span class="chip bg-color">DOM</span>
+                    <a href="/tags/Markdow/">
+                        <span class="chip bg-color">Markdow</span>
                     </a>
                     
                 </div>
@@ -966,10 +971,10 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/07/blog-js-9/">
+                <a href="/2021/02/26/blog-js-9/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM事件-基础概念">
+                        <img src="https://i.loli.net/2021/03/15/T7rkuI5epOLsnGZ.png" class="responsive-img" alt="DOM事件-基础概念">
                         
                         <span class="card-title">DOM事件-基础概念</span>
                     </div>
@@ -982,7 +987,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
                             </span>
                         <span class="publish-author">
                             

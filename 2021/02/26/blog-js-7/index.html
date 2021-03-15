@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DOM事件-事件注册, overwhat">
+    <meta name="keywords" content="DOM事件-基础概念, overwhat">
     <meta name="description" content="人生而自由，却无往不在枷锁之中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DOM事件-事件注册 | overwhat</title>
+    <title>DOM事件-基础概念 | overwhat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -432,12 +432,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/15/T7rkuI5epOLsnGZ.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DOM事件-事件注册</h1>
+                    <h1 class="description center-align post-title">DOM事件-基础概念</h1>
                 </div>
             </div>
         </div>
@@ -582,7 +582,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-07
+                    2021-02-26
                 </div>
                 
 
@@ -596,7 +596,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    328
+                    478
                 </div>
                 
 
@@ -623,29 +623,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DOM事件-事件注册"><a href="#DOM事件-事件注册" class="headerlink" title="DOM事件-事件注册"></a>DOM事件-事件注册</h1><p>事件绑定</p>
-<h2 id="dom0版本"><a href="#dom0版本" class="headerlink" title="dom0版本"></a>dom0版本</h2><p>将事件名称前面加上on，作为dom的属性名，给该属性赋值为一个函数，即为事件注册。</p>
-<p>事件移除：重新给事件属性赋值，通常赋值为null和undefined</p>
-<h2 id="dom2版本"><a href="#dom2版本" class="headerlink" title="dom2版本"></a>dom2版本</h2><p>dom对象.addEventListener：注册事件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> addEventListener(&quot;click&quot;,function()&#123;</span><br><span class="line"> console.log(&quot;1&quot;)</span><br><span class="line">&#125;,true&#x2F;false);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>1值 事件名称（事件类型）注意不加on<br>2值 处理函数 可以写多个处理程序<br>3值 使用时表示是否在捕获阶段触发 默认为false 为冒泡阶段触发</p>
-</blockquote>
-<p>与dom0的区别</p>
-<ol>
-<li>dom2可以为某个元素的同一个事件，添加多个处理程序，按照注册的先后顺序运行</li>
-<li>dom2允许开发者控制事件处理的阶段，使用第三个参数，表示是否在捕获阶段触发<ol>
-<li>如果元素是目标元素（事件源），第三个参数无效</li>
-</ol>
+                <h1 id="DOM事件-基础概念"><a href="#DOM事件-基础概念" class="headerlink" title="DOM事件-基础概念"></a>DOM事件-基础概念</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li><p>事件：发生一件事</p>
 </li>
-</ol>
-<p>事件的移除：dom对象.removeEventListener(事件名, 处理函数);</p>
-<p><strong>dom2中如果要移除事件，不能使用匿名函数</strong></p>
-<p><strong>细节</strong>：<br>了解就行了</p>
-<ol>
-<li>dom2在IE8及以下不兼容，需要使用attachEvent，detachEvent添加和移除事件</li>
-<li>添加和移除事件时，可以将第三个参数写为一个对象，进行相关配置</li>
-</ol>
+<li><p>事件类型：发生什么事情；点击、鼠标按下、鼠标抬起、鼠标移入、鼠标移出、键盘按下、键盘抬起…</p>
+</li>
+<li><p>事件处理程序：一个函数，当某件事情发生时运行。</p>
+</li>
+<li><p>事件注册：将一个事件处理程序，挂载到某个事件上。</p>
+</li>
+</ul>
+<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>事件流：当某个事件发生的时候，哪些元素会监听到该事件发生，这些元素发生该事件的顺序。<br><img src="https://i.loli.net/2021/03/15/zCTZXKUvgYqyjSA.jpg" alt="事件流"><br><strong>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span></span><br><span class="line">        点击我</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 给button注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;button&quot;</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;button&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给div注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;div&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给body注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;body&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给html注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.documentElement.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;html&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给整个文档注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;document&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上输出的结果依次为button&gt;div&gt;body&gt;html&gt;document<br>事件流的演示  运行顺序（默认情况下）：冒泡方式触发-从里到外<br>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</p>
+<p>微软看法：事件冒泡：先触发最里层的元素，然后再依次触发外层元素<br>网景看法：事件捕获：先触发外层的元素，然后再依次触发里面元素</p>
+<blockquote>
+<p>目前，标准规定，默认情况下，事件是冒泡的方式触发。</p>
+</blockquote>
+<p>事件源、事件目标：事件目标阶段的元素（最里层元素）</p>
+<p><strong>事件捕获 从外到内</strong><br><strong>事件冒泡 从内到外</strong></p>
 
                 
             </div>
@@ -672,7 +668,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://overwhatx.github.io/2021/02/07/blog-js-8/">https://overwhatx.github.io/2021/02/07/blog-js-8/</a>
+                    <a href="https://overwhatx.github.io/2021/02/26/blog-js-7/">https://overwhatx.github.io/2021/02/26/blog-js-7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -886,7 +882,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-02-07T21-50-26',
+        id: '2021-02-26T21-51-26',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -918,12 +914,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/07/blog-js-6/">
+                <a href="/2021/02/26/blog-js-8/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM元素样式">
+                        <img src="https://i.loli.net/2021/03/15/T7rkuI5epOLsnGZ.png" class="responsive-img" alt="DOM事件-事件注册">
                         
-                        <span class="card-title">DOM元素样式</span>
+                        <span class="card-title">DOM事件-事件注册</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -934,7 +930,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
                         </span>
                         <span class="publish-author">
                             
@@ -970,12 +966,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/07/blog-js-7/">
+                <a href="/2021/02/26/blog-js-6/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/03/15/ZbUCDFjHpdv5aY9.jpg" class="responsive-img" alt="DOM事件-基础概念">
+                        <img src="https://i.loli.net/2021/03/15/T7rkuI5epOLsnGZ.png" class="responsive-img" alt="DOM元素样式">
                         
-                        <span class="card-title">DOM事件-基础概念</span>
+                        <span class="card-title">DOM元素样式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -986,7 +982,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
                             </span>
                         <span class="publish-author">
                             
