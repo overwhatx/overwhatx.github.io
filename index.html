@@ -711,35 +711,6 @@
     
     <div class="col s12 m6" >
         
-             <div class="post-card" style="background-image: url('https://i.loli.net/2021/03/15/yu9YzQwGB4iXlv3.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/JavaScript/" class="category">JavaScript</a>
-                        
-                    
-                </div>
-                <a href="/2021/02/26/blog-js-10/">
-                    <h3 class="post-title">DOM事件-事件注册中的addEventListener捕获与冒泡</h3>
-                </a>
-                <p class="post-description">
-                    
-                        详解addEventListener() 捕获与冒泡这篇笔记存在未证实的知识待处理（目标阶段的捕获和冒泡是否有用问题）
-addEventLi
-                    
-                </p>
-                <a href="/2021/02/26/blog-js-10/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" >
-        
              <div class="post-card" style="background-image: url('https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg')">
         
             <div class="post-body">
@@ -759,7 +730,36 @@ addEventLi
 编写一个函数，用于返回一个利于阅读的日期字符串格式   年 - 月 - 日 时: 分: 秒12345678910function Time
                     
                 </p>
-                <a href="/2021/02/02/blog-js-1/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                <a href="/2021/02/02/blog-js-1/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" >
+        
+             <div class="post-card" style="background-image: url('https://i.loli.net/2021/03/15/yu9YzQwGB4iXlv3.jpg')">
+        
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/JavaScript/" class="category">JavaScript</a>
+                        
+                    
+                </div>
+                <a href="/2021/02/26/blog-js-10/">
+                    <h3 class="post-title">DOM事件-事件注册中的addEventListener捕获与冒泡</h3>
+                </a>
+                <p class="post-description">
+                    
+                        详解addEventListener() 捕获与冒泡这篇笔记存在未证实的知识待处理（目标阶段的捕获和冒泡是否有用问题）
+addEventLi
+                    
+                </p>
+                <a href="/2021/02/26/blog-js-10/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1491,18 +1491,21 @@ document.head：获取hea
                                     <a href="/about" target="_blank">
                                         overWhat
                                     </a>
-                                    |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-                                    |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery"
-                                        target="_blank">Matery</a>
+                                    |&nbsp;Powered by&nbsp;<a href="#" target="_blank">Hexo</a>
+                                    |&nbsp;Theme&nbsp;<a href="#" target="_blank">Matery</a>
                                     <br>
+                                    <!-- 统计站点字数 -->
                                     
                                         &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
                                             class="white-color">
                                             7.6k
                                         </span>&nbsp;字
                                         
+                                            <!-- 访问量 -->
                                             
-                                                
+                                                <!-- 原版 -->
+                                                <!-- 
+
                                                     
                                                         
                                                             
@@ -1520,55 +1523,119 @@ document.head：获取hea
                                                                                 id="busuanzi_value_site_uv"
                                                                                 class="white-color"></span>&nbsp;人
                                                                         </span>
-                                                                        
-                                                                            <br>
-                                                                            
-                                                                                <span id="sitetime">载入运行时间...</span>
-                                                                                <script>
-                                                                                    function siteTime() {
-                                                                                        var seconds = 1000;
-                                                                                        var minutes = seconds * 60;
-                                                                                        var hours = minutes * 60;
-                                                                                        var days = hours * 24;
-                                                                                        var years = days * 365;
-                                                                                        var today = new Date();
-                                                                                        var startYear = "2019";
-                                                                                        var startMonth = "6";
-                                                                                        var startDate = "26";
-                                                                                        var startHour = "13";
-                                                                                        var startMinute = "14";
-                                                                                        var startSecond = "20";
-                                                                                        var todayYear = today.getFullYear();
-                                                                                        var todayMonth = today.getMonth() + 1;
-                                                                                        var todayDate = today.getDate();
-                                                                                        var todayHour = today.getHours();
-                                                                                        var todayMinute = today.getMinutes();
-                                                                                        var diffYears = Math.floor(diff / years);
-                                                                                        var diffDays = Math.floor((diff / days) - diffYears * 365);
-                                                                                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                                                                                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                                                                                            minutes);
-                                                                                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                         -->
+
+                                                
+                                                    <span id="busuanzi_container_site_pv" style='display:none'></span>
+                                                    <i class="fa fa-heart-o"></i>
+                                                    Visits <span id="busuanzi_value_site_pv" class="white-color"></span>
+
+                                                    
+
+                                                        
+                                                            <span id="busuanzi_container_site_uv"
+                                                                style='display:none'></span>
+                                                            Person time,&nbsp;Number of visitors <span
+                                                                id="busuanzi_value_site_uv" class="white-color"></span>
+                                                            people.
+
+                                                            
+                                                                <br>
+
+                                                                <!-- 运行时间 -->
+                                                                <!-- 
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2019";
+                                                                            var startMonth = "6";
+                                                                            var startDate = "26";
+                                                                            var startHour = "13";
+                                                                            var startMinute = "14";
+                                                                            var startSecond = "20";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
                                                                                         var todaySecond = today.getSeconds();
-                                                                                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                                                                                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                                                                                        var diff = t2 - t1;
-                                                                                        diffMinutes * minutes) / seconds);
-                                                                                        if (startYear == todayYear) {
-                                                                                            document.getElementById("year").innerHTML = todayYear;
-                                                                                            document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffDays + " 天 " + diffHours +
-                                                                                                " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                                                                                        } else {
-                                                                                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                                                                                            document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffYears + " 年 " + diffDays +
-                                                                                                " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                                                                                        }
-                                                                                    }
-                                                                                    setInterval(siteTime, 1000);
-                                                                                </script>
-                                                                                
-                                                                                    <br>
-                                                                                    
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                     -->
+                                                                
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2019";
+                                                                            var startMonth = "6";
+                                                                            var startDate = "26";
+                                                                            var startHour = "13";
+                                                                            var startMinute = "14";
+                                                                            var startSecond = "20";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var todaySecond = today.getSeconds();
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "小破站已在各种灾难中安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                    
+
+                                                                        <br>
+                                                                        
                     </div>
                     <div class="col s12 m4 l4 social-link social-statis">
                         
