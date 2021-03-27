@@ -596,7 +596,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    340
+                    338
                 </div>
                 
 
@@ -651,7 +651,7 @@ tags:               #文章标签 能写多个
 <li>安装插件 指令如下<pre><code>npm i -S hexo-prism-plugin
 </code></pre>
 </li>
-<li>修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并将 prismjs 的值设为true 如下：<pre><code>highlight:
+<li>修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并添加代码如下：<pre><code>highlight:
 enable: false #改为false
 line_number: true
 auto_detect: false
@@ -661,7 +661,7 @@ hljs: false
 </code></pre>
 </li>
 </ol>
-<p>prismjs:<br>  enable: true #改为true<br>  preprocess: true<br>  line_number: true<br>  tab_replace: “”<br>```</p>
+<p>prism_plugin:<br>  mode: “preprocess” # realtime/preprocess<br>  theme: “tomorrow”<br>  line_number: false # default false<br>  custom_css:<br>```</p>
 
                 
             </div>

@@ -8,7 +8,7 @@
       <link href="2021/03/09/hexo-note/"/>
       <url>2021/03/09/hexo-note/</url>
       
-        <content type="html"><![CDATA[<h2 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板:"></a>新建文章模板:</h2><pre><code>title: &#123;&#123; title &#125;&#125;  #文章标题date: &#123;&#123; date &#125;&#125;    #文件创建时间author:             #文章作者img: 直接填链接      #文章封面图coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片top: false          #文章是否置顶cover: false        #表示该文章是否需要加入到首页轮播封面中toc: true           #约束mathjax: false      #是否开启数学公式支持password:           #设置阅读文章验证密码 不填写默认没有summary:            #自定义的文章摘要内容 不填写则为文章首内容 categories:         #文章分类 只能写一个tags:               #文章标签 能写多个    -文章标签1    -文章标签2</code></pre><h2 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h2><h3 id="valine评论系统"><a href="#valine评论系统" class="headerlink" title="valine评论系统"></a>valine评论系统</h3><p>Valine 官方文档 <a href="https://valine.js.org/">https://valine.js.org/</a></p><ol><li>注册 LeanCloud </li><li>在LeanCloud中添加应用 添加开发版</li><li>点击设置&gt;应用keys</li><li>复制keys中 appID值和appKey值</li><li>粘贴到主题目录下配置文件中   _config.yml下的valine配置<br>valine:<br>enable: true #true为开启<br>appId: 粘贴对应的值<br>appKey: 粘贴对应的值</li></ol><h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><ol><li>安装插件 指令如下<pre><code>npm i -S hexo-prism-plugin</code></pre></li><li>修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并将 prismjs 的值设为true 如下：<pre><code>highlight:enable: false #改为falseline_number: trueauto_detect: falsetab_replace: &quot;&quot;wrap: truehljs: false</code></pre></li></ol><p>prismjs:<br>  enable: true #改为true<br>  preprocess: true<br>  line_number: true<br>  tab_replace: “”<br>```</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板:"></a>新建文章模板:</h2><pre><code>title: &#123;&#123; title &#125;&#125;  #文章标题date: &#123;&#123; date &#125;&#125;    #文件创建时间author:             #文章作者img: 直接填链接      #文章封面图coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片top: false          #文章是否置顶cover: false        #表示该文章是否需要加入到首页轮播封面中toc: true           #约束mathjax: false      #是否开启数学公式支持password:           #设置阅读文章验证密码 不填写默认没有summary:            #自定义的文章摘要内容 不填写则为文章首内容 categories:         #文章分类 只能写一个tags:               #文章标签 能写多个    -文章标签1    -文章标签2</code></pre><h2 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h2><h3 id="valine评论系统"><a href="#valine评论系统" class="headerlink" title="valine评论系统"></a>valine评论系统</h3><p>Valine 官方文档 <a href="https://valine.js.org/">https://valine.js.org/</a></p><ol><li>注册 LeanCloud </li><li>在LeanCloud中添加应用 添加开发版</li><li>点击设置&gt;应用keys</li><li>复制keys中 appID值和appKey值</li><li>粘贴到主题目录下配置文件中   _config.yml下的valine配置<br>valine:<br>enable: true #true为开启<br>appId: 粘贴对应的值<br>appKey: 粘贴对应的值</li></ol><h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><ol><li>安装插件 指令如下<pre><code>npm i -S hexo-prism-plugin</code></pre></li><li>修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并添加代码如下：<pre><code>highlight:enable: false #改为falseline_number: trueauto_detect: falsetab_replace: &quot;&quot;wrap: truehljs: false</code></pre></li></ol><p>prism_plugin:<br>  mode: “preprocess” # realtime/preprocess<br>  theme: “tomorrow”<br>  line_number: false # default false<br>  custom_css:<br>```</p>]]></content>
       
       
       <categories>
@@ -346,9 +346,9 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> Date </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -373,9 +373,9 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> Date </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
