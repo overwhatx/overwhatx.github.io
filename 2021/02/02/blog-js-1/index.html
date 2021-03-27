@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
+    
 
-
-<body>
-    <header class="navbar-fixed">
+                <body>
+                    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -428,9 +428,9 @@
 
 </header>
 
-    
+                        
 
-
+        
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
@@ -445,12 +445,12 @@
 </div>
 
 
+            
 
+                <main class="post-container content">
 
-<main class="post-container content">
-
-    
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+                    
+                        <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -596,14 +596,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    613
+                    557
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -624,9 +624,78 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ol>
-<li>编写一个函数，用于返回一个利于阅读的日期字符串格式   年 - 月 - 日 时: 分: 秒<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Time(date) &#123;</span><br><span class="line">           var year &#x3D; date.getFullYear().toString().padStart(4, 0);</span><br><span class="line">           var month &#x3D; date.getMonth().toString().padStart(2, 0);</span><br><span class="line">           var day &#x3D; date.getDate().toString().padStart(2, 0);</span><br><span class="line">           var hours &#x3D; date.getHours().toString().padStart(2, 0);</span><br><span class="line">           var minutes &#x3D; date.getMinutes().toString().padStart(2, 0);</span><br><span class="line">           var seconds &#x3D; date.getSeconds().toString().padStart(2, 0);</span><br><span class="line">           return &#96;$&#123;year&#125;-$&#123;month&#125;-$&#123;day&#125; $&#123;hours&#125;:$&#123;minutes&#125;:$&#123;seconds&#125;&#96;</span><br><span class="line">       &#125;;</span><br><span class="line">       console.log(Time(new Date()));</span><br></pre></td></tr></table></figure></li>
-<li>生日倒计时 计算用户当下距离生日时日天数 如果已过则计算明年的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getDaysToBirthday(month, day) &#123;</span><br><span class="line">           var now &#x3D; new Date();</span><br><span class="line">           var thisYear &#x3D; now.getFullYear();  &#x2F;&#x2F;调用函数获取当前年份并赋值给thisYear</span><br><span class="line">           &#x2F;&#x2F; 用户今年的生日日期</span><br><span class="line">           var birthday &#x3D; new Date(thisYear, month - 1, day);</span><br><span class="line"></span><br><span class="line">           if (birthday &lt; now) &#123;   &#x2F;&#x2F; 判断今年的生日是否已过 已过则计算明年的生日</span><br><span class="line">               birthday.setFullYear(now.getFullYear() + 1);</span><br><span class="line">           &#125;</span><br><span class="line">           var timeDec &#x3D; birthday - now;   &#x2F;&#x2F;用户生日减当前的日期得到毫秒</span><br><span class="line">           var days &#x3D; timeDec &#x2F; (24 * 60 * 60 * 1000)</span><br><span class="line">           return Math.ceil(days) &#x2F;&#x2F;向上取整 不足一天为一天</span><br><span class="line">       &#125;</span><br><span class="line">       console.log(getDaysToBirthday(6, 26));</span><br></pre></td></tr></table></figure></li>
-<li>根据系统当前的月份，输出这一个月每一天的星期<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">function print() &#123;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    var y &#x3D; now.getFullYear(); &#x2F;&#x2F;将当前年份赋值给y</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 使用巧妙的方法判断闰平年间接判断月份天数 这里没有调用判断闰平年</span><br><span class="line">    &#x2F;&#x2F; 方法：将得到的当前月加1 然后天数设置为0 这就等于上个月的最后一天 从而得知这个月有多少天</span><br><span class="line">    var m &#x3D; now.getMonth() + 1; &#x2F;&#x2F;将当前获取到的月份加1并赋值给m</span><br><span class="line"></span><br><span class="line">    var days &#x3D; new Date(y, m, 0).getDate();   &#x2F;&#x2F;含义年为y月为m日为零传给getDate()</span><br><span class="line">    &#x2F;&#x2F; console.log(y, m, days);  &#x2F;&#x2F;当前结果2021 3 31</span><br><span class="line">    for (var i &#x3D; 1; i &lt;&#x3D; days; i++) &#123;</span><br><span class="line">        &#x2F;&#x2F; console.log(&#96;$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日:星期$&#123;new Date(y, m - 1, i).getDay()&#125;&#96;);</span><br><span class="line">        console.log(&#96;$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日：星期$&#123;getDayOfWeek(y, m, i)&#125;&#96;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function getDayOfWeek(year, month, day) &#123;</span><br><span class="line">    var d &#x3D; new Date(year, month - 1, day);</span><br><span class="line">    var day &#x3D; d.getDay(); &#x2F;&#x2F;得到星期</span><br><span class="line">    &#x2F;&#x2F; 进行匹配</span><br><span class="line">    switch (day) &#123;</span><br><span class="line">        case 0:</span><br><span class="line">            return &quot;日&quot;;</span><br><span class="line">        case 1:</span><br><span class="line">            return &quot;一&quot;;</span><br><span class="line">        case 2:</span><br><span class="line">            return &quot;二&quot;;</span><br><span class="line">        case 3:</span><br><span class="line">            return &quot;三&quot;;</span><br><span class="line">        case 4:</span><br><span class="line">            return &quot;四&quot;;</span><br><span class="line">        case 5:</span><br><span class="line">            return &quot;五&quot;;</span><br><span class="line">        case 6:</span><br><span class="line">            return &quot;六&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">print();</span><br></pre></td></tr></table></figure></li>
+<li><p>编写一个函数，用于返回一个利于阅读的日期字符串格式   年 - 月 - 日 时: 分: 秒</p>
+<pre><code>function Time(date) &#123;
+         var year = date.getFullYear().toString().padStart(4, 0);
+         var month = date.getMonth().toString().padStart(2, 0);
+         var day = date.getDate().toString().padStart(2, 0);
+         var hours = date.getHours().toString().padStart(2, 0);
+         var minutes = date.getMinutes().toString().padStart(2, 0);
+         var seconds = date.getSeconds().toString().padStart(2, 0);
+         return `$&#123;year&#125;-$&#123;month&#125;-$&#123;day&#125; $&#123;hours&#125;:$&#123;minutes&#125;:$&#123;seconds&#125;`
+     &#125;;
+     console.log(Time(new Date()));
+</code></pre>
+</li>
+<li><p>生日倒计时 计算用户当下距离生日时日天数 如果已过则计算明年的</p>
+<pre><code>function getDaysToBirthday(month, day) &#123;
+         var now = new Date();
+         var thisYear = now.getFullYear();  //调用函数获取当前年份并赋值给thisYear
+         // 用户今年的生日日期
+         var birthday = new Date(thisYear, month - 1, day);
+
+         if (birthday &lt; now) &#123;   // 判断今年的生日是否已过 已过则计算明年的生日
+             birthday.setFullYear(now.getFullYear() + 1);
+         &#125;
+         var timeDec = birthday - now;   //用户生日减当前的日期得到毫秒
+         var days = timeDec / (24 * 60 * 60 * 1000)
+         return Math.ceil(days) //向上取整 不足一天为一天
+     &#125;
+     console.log(getDaysToBirthday(6, 26));
+</code></pre>
+</li>
+<li><p>根据系统当前的月份，输出这一个月每一天的星期</p>
+<pre><code>     function print() &#123;
+         var now = new Date();
+         var y = now.getFullYear(); //将当前年份赋值给y
+
+         // 使用巧妙的方法判断闰平年间接判断月份天数 这里没有调用判断闰平年
+         // 方法：将得到的当前月加1 然后天数设置为0 这就等于上个月的最后一天 从而得知这个月有多少天
+         var m = now.getMonth() + 1; //将当前获取到的月份加1并赋值给m
+
+         var days = new Date(y, m, 0).getDate();   //含义年为y月为m日为零传给getDate()
+         // console.log(y, m, days);  //当前结果2021 3 31
+         for (var i = 1; i &lt;= days; i++) &#123;
+             // console.log(`$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日:星期$&#123;new Date(y, m - 1, i).getDay()&#125;`);
+             console.log(`$&#123;y&#125;年$&#123;m&#125;月$&#123;i&#125;日：星期$&#123;getDayOfWeek(y, m, i)&#125;`);
+
+         &#125;
+
+     &#125;
+     function getDayOfWeek(year, month, day) &#123;
+         var d = new Date(year, month - 1, day);
+         var day = d.getDay(); //得到星期
+         // 进行匹配
+         switch (day) &#123;
+             case 0:
+                 return &quot;日&quot;;
+             case 1:
+                 return &quot;一&quot;;
+             case 2:
+                 return &quot;二&quot;;
+             case 3:
+                 return &quot;三&quot;;
+             case 4:
+                 return &quot;四&quot;;
+             case 5:
+                 return &quot;五&quot;;
+             case 6:
+                 return &quot;六&quot;;
+         &#125;
+     &#125;
+     print();
+</code></pre>
+</li>
 </ol>
 
                 
@@ -1393,14 +1462,13 @@
     });
 </script>
 
-    
+                            
 
-</main>
+                </main>
 
+                
 
-
-
-    <footer class="page-footer bg-color">
+                            <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
@@ -1478,7 +1546,7 @@
                                     
                                         &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
                                             class="white-color">
-                                            7.6k
+                                            7.5k
                                         </span>&nbsp;字
                                         
                                             <!-- 访问量 -->
@@ -1656,7 +1724,7 @@
 
 <div class="progress-bar"></div>
 
-    <!-- 搜索遮罩框 -->
+                                <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
@@ -1760,7 +1828,7 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
+                                    <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
@@ -1768,16 +1836,22 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
 
-    <!-- Baidu Analytics -->
+                                        <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
+                                            <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -1793,38 +1867,51 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
 
-    
+                                                                
 
-    
+                                                                        
 
-    <!--腾讯兔小巢-->
-    
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
-            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
-        </div>
-    
-    
-    <script type="text/javascript" color="0,0,0"
-        pointColor="255,0,0" opacity='1'
-        zIndex="-1" count="199"
-        src="/libs/background/canvas-nest.js"></script>
-    
+                                                                                <!--腾讯兔小巢-->
+                                                                                
+                                                                                    <div
+                                                                                        style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+                                                                                        <a title="兔小巢"
+                                                                                            target="_blank" rel="noopener" href="https://support.qq.com/products/"><i
+                                                                                                class="fa fa-comments fa-3x"
+                                                                                                aria-hidden="true"></i></a>
+                                                                                    </div>
+                                                                                    
+                                                                                        
+                                                                                            <script
+                                                                                                type="text/javascript"
+                                                                                                color="0,0,0"
+                                                                                                pointColor="255,0,0"
+                                                                                                opacity='1'
+                                                                                                zIndex="-1"
+                                                                                                count="199"
+                                                                                                src="/libs/background/canvas-nest.js"></script>
+                                                                                            
 
-    
+                                                                                                
 
-    
+                                                                                                            
 
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+                                                                                                                    
+                                                                                                                        <script
+                                                                                                                            src="/libs/instantpage/instantpage.js"
+                                                                                                                            type="module"></script>
+                                                                                                                        
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
+                <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
 
 </html>

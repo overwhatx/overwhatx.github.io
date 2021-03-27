@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
+    
 
-
-<body>
-    <header class="navbar-fixed">
+                <body>
+                    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -428,9 +428,9 @@
 
 </header>
 
-    
+                        
 
-
+        
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
@@ -445,12 +445,12 @@
 </div>
 
 
+            
 
+                <main class="post-container content">
 
-<main class="post-container content">
-
-    
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+                    
+                        <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -596,7 +596,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.1k
                 </div>
                 
 
@@ -631,23 +631,41 @@
 <p>规则中直接书写字面量字符</p>
 <ol start="2">
 <li><p>特殊字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.   匹配除换行符 \n 之外的所有单字符。要匹配 . ，请使用 \. </span><br><span class="line">...a... 释义 匹配a前和a后都必须要有3个字符的</span><br><span class="line"></span><br><span class="line">^   匹配输入字符串的开始位置，除非在方括号表达式中使用，当该符号在方括号表达式中使用时，表示不接受该方括号表达式中的字符集合。要匹配 ^ 字符本身，请使用 \^。</span><br><span class="line">^abc... 释义 匹配输入字符串的开始位置为abc且后面接有3个字符 注意只匹配开始位置的其他位置匹配不成功</span><br><span class="line"></span><br><span class="line">$   匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 &#39;\n&#39; 或 &#39;\r&#39;。要匹配 $ 字符本身，请使用 \$。</span><br><span class="line">^abc...&amp; 释义：匹配输入字符串的开始位置为abc且后面接有3个字符后就结束 （限定为6位数，多一位就不在匹配）</span><br><span class="line"></span><br><span class="line">? 匹配前面的一次或者0次</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>转义符</p>
+<pre><code>.   匹配除换行符 \n 之外的所有单字符。要匹配 . ，请使用 \. 
+...a... 释义 匹配a前和a后都必须要有3个字符的
+</code></pre>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\n  匹配一个换行符</span><br><span class="line">\r  匹配一个回车符</span><br><span class="line">\t  匹配一个制表符</span><br><span class="line">\s  匹配一个空白字符</span><br><span class="line">\S  匹配一个除空白字符以外的所有字符</span><br><span class="line">\b  匹配一个字符串的边界 （字符串开始和结束都是边界 空格 换行 制表符都是边界）</span><br><span class="line">\B  非单词边界匹配</span><br><span class="line">\d  匹配一个数字字符 [0~9] 例：^1\d\d\d\d\d\d\d\d\d\d$ 以1开头的十一位数的号码</span><br><span class="line">\D  匹配一非个数字字符</span><br><span class="line">\w  匹配字母、数字、下划线。等价于&#39;[A-Za-z0-9_]&#39;</span><br><span class="line">\W  匹配非字母、数字、下划线。</span><br><span class="line">\u  Unicode 字符转换匹配 \u4f60\u771f\u68d2&#x3D;你真棒 </span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>字符集</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[字符范围]  分别匹配字符范围内的一个字符 </span><br><span class="line">[^0-9] 释义：匹配除0到9之间以外的字符 &#x3D;\D*</span><br><span class="line">匹配所有字符：</span><br><span class="line">    [\d\D]+ 释义：匹配所有数字字符和非数字字符 至少1个</span><br><span class="line">    [\s\S]+</span><br></pre></td></tr></table></figure>
-<p>[a-z] [a-zA-Z] [0-9] [A-Za-z0-9_]范围可以随意组合</p>
-<p>匹配中文： <code>[\u4e00-\u9FA5]</code> 汉字unicode编码范围</p>
-<ol start="5">
-<li>量词</li>
-</ol>
-<p><strong>指定是（前面）的规则出现的次数</strong> 量词前最近的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">单纯匹配本身时例如 + 时需要在其前面 加一个 \ 其他符号同理</span><br><span class="line"></span><br><span class="line">*   匹配前面的子表达式零次或多次</span><br><span class="line">+   至少匹配一个或者多个 例：\d+ 释义：至少匹配到一个数字</span><br><span class="line">?   匹配零个或者1个</span><br><span class="line">&#123;n&#125;: 匹配n个</span><br><span class="line">&#123;n,&#125;: 匹配&gt;&#x3D;n个</span><br><span class="line">&#123;n,m&#125;: 匹配n-m个</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例1：匹配6-16位的密码   ^[0-9a-zA-Z]&#123;6,16&#125;$ 释义：匹配范围[0到9 a到z A到Z]6到16位数的字符</span><br><span class="line">例2: 匹配2到6位的中文名字 ^[\u4e00-\u9FA5]&#123;2,6&#125;$</span><br></pre></td></tr></table></figure>
+<p>^   匹配输入字符串的开始位置，除非在方括号表达式中使用，当该符号在方括号表达式中使用时，表示不接受该方括号表达式中的字符集合。要匹配 ^ 字符本身，请使用 ^。<br>^abc… 释义 匹配输入字符串的开始位置为abc且后面接有3个字符 注意只匹配开始位置的其他位置匹配不成功</p>
+<p>$   匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 ‘\n’ 或 ‘\r’。要匹配 $ 字符本身，请使用 $。<br>^abc…&amp; 释义：匹配输入字符串的开始位置为abc且后面接有3个字符后就结束 （限定为6位数，多一位就不在匹配）</p>
+<p>? 匹配前面的一次或者0次</p>
+<pre><code>
+3. 转义符
+</code></pre>
+<p>\n  匹配一个换行符<br>\r  匹配一个回车符<br>\t  匹配一个制表符<br>\s  匹配一个空白字符<br>\S  匹配一个除空白字符以外的所有字符<br>\b  匹配一个字符串的边界 （字符串开始和结束都是边界 空格 换行 制表符都是边界）<br>\B  非单词边界匹配<br>\d  匹配一个数字字符 [0~9] 例：^1\d\d\d\d\d\d\d\d\d\d$ 以1开头的十一位数的号码<br>\D  匹配一非个数字字符<br>\w  匹配字母、数字、下划线。等价于’[A-Za-z0-9_]’<br>\W  匹配非字母、数字、下划线。<br>\u  Unicode 字符转换匹配 \u4f60\u771f\u68d2=你真棒 </p>
+<pre><code>
+4. 字符集
+</code></pre>
+<p>[字符范围]  分别匹配字符范围内的一个字符<br>[^0-9] 释义：匹配除0到9之间以外的字符 =\D*<br>匹配所有字符：<br>    [\d\D]+ 释义：匹配所有数字字符和非数字字符 至少1个<br>    [\s\S]+</p>
+<pre><code>[a-z] [a-zA-Z] [0-9] [A-Za-z0-9_]范围可以随意组合
+
+匹配中文： ```[\u4e00-\u9FA5]``` 汉字unicode编码范围
+
+5. 量词
+
+**指定是（前面）的规则出现的次数** 量词前最近的
+</code></pre>
+<p>单纯匹配本身时例如 + 时需要在其前面 加一个 \ 其他符号同理</p>
+<ul>
+<li>  匹配前面的子表达式零次或多次</li>
+</ul>
+<ul>
+<li>  至少匹配一个或者多个 例：\d+ 释义：至少匹配到一个数字<br>?   匹配零个或者1个<br>{n}: 匹配n个<br>{n,}: 匹配&gt;=n个<br>{n,m}: 匹配n-m个<pre><code>
+</code></pre>
+例1：匹配6-16位的密码   ^[0-9a-zA-Z]{6,16}$ 释义：匹配范围[0到9 a到z A到Z]6到16位数的字符<br>例2: 匹配2到6位的中文名字 ^[\u4e00-\u9FA5]{2,6}$<pre><code>
+</code></pre>
+</li>
+</ul>
 <ol start="6">
 <li>或者<br>多个规则之间，适用或者 <code>|</code>,表示多个规则任选其一</li>
 </ol>
@@ -683,13 +701,57 @@
 </ul>
 <h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h3 id="捕获组"><a href="#捕获组" class="headerlink" title="捕获组"></a>捕获组</h3><p>(1): 用小括号包裹的部分叫做捕获组，捕获组会出现在匹配结果中 每一个小括号为一个捕获组 嵌套根据实际情况看<br>    在正则表达式中，使用某个捕获组，使用方法：<code>\捕获组编号</code></p>
 <p>(2):捕获组可以命名，叫做具名捕获组(命名捕获组) <code>在小括号中前面写入 ?&lt;命名&gt;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var p &#x3D; &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;</span><br><span class="line">       var regs &#x3D; &#x2F;(?&lt;year&gt;\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line">       while (result &#x3D; regs.exec(p)) &#123;</span><br><span class="line">           &#x2F;&#x2F; console.log(result);</span><br><span class="line">           &#x2F;&#x2F; 0--是整个捕获组       捕获组1       捕获组2     捕获组3</span><br><span class="line">           console.log(result.groups);</span><br><span class="line">           console.log(result[0], result.groups.year, result.groups.month, result.groups.day);</span><br><span class="line">       &#125;</span><br><span class="line">       &#x2F;&#x2F; 下面为输出释义</span><br><span class="line">       &#x2F;*</span><br><span class="line">           0: &quot;2ah&quot;   这里是所有匹配值</span><br><span class="line">           1: &quot;2a&quot;    这里是小括号捕获组</span><br><span class="line">           groups:     记录命名的捕获组 叫做 (具名捕获组)</span><br><span class="line">       *&#x2F;</span><br><span class="line">       </span><br></pre></td></tr></table></figure>
+<pre><code> var p = &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;
+        var regs = /(?&lt;year&gt;\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)/g;
+        while (result = regs.exec(p)) &#123;
+            // console.log(result);
+            // 0--是整个捕获组       捕获组1       捕获组2     捕获组3
+            console.log(result.groups);
+            console.log(result[0], result.groups.year, result.groups.month, result.groups.day);
+        &#125;
+        // 下面为输出释义
+        /*
+            0: &quot;2ah&quot;   这里是所有匹配值
+            1: &quot;2a&quot;    这里是小括号捕获组
+            groups:     记录命名的捕获组 叫做 (具名捕获组)
+        */
+        
+</code></pre>
 <p>(3):非捕获组  捕获组是默认是开启的 会占用资源浪费执行效率 关闭捕获方法：在小括号中前面写入 ?:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; var p &#x3D; &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;</span><br><span class="line">&#x2F;&#x2F; &#x2F;&#x2F; 年不会被捕获了 只会匹配输出</span><br><span class="line">&#x2F;&#x2F; var regs &#x3D; &#x2F;(?:\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line">&#x2F;&#x2F; while (result &#x3D; regs.exec(p)) &#123;</span><br><span class="line">&#x2F;&#x2F;     &#x2F;&#x2F; 0--是整个捕获组       捕获组1       捕获组2     捕获组3</span><br><span class="line">&#x2F;&#x2F;     console.log(result[0], result.groups.year, result.groups.month, result.groups.day);</span><br><span class="line">&#x2F;&#x2F;     console.log(result.groups);</span><br><span class="line">&#x2F;&#x2F; &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>        // var p = &quot;2020-6-26,2020-5-1,2020-11-2,2020-11-15&quot;;
+        // // 年不会被捕获了 只会匹配输出
+        // var regs = /(?:\d&#123;4&#125;)-(?&lt;month&gt;\d&#123;1,2&#125;)-(?&lt;day&gt;\d&#123;1,2&#125;)/g;
+        // while (result = regs.exec(p)) &#123;
+        //     // 0--是整个捕获组       捕获组1       捕获组2     捕获组3
+        //     console.log(result[0], result.groups.year, result.groups.month, result.groups.day);
+        //     console.log(result.groups);
+        // &#125;
+</code></pre>
 <p><strong>了解</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方法replace()--替换 也可以使用捕获组 例题：把一个日期中的横杠换成斜杠 但两个日期间的符号不改变</span><br><span class="line"></span><br><span class="line">       var p &#x3D; &quot;2020-6-26,-2020-5-1,2020-11-2,-2020-11-15&quot;;</span><br><span class="line">       var regs &#x3D; &#x2F;(\d&#123;4&#125;)-(\d&#123;1,2&#125;)-(\d&#123;1,2&#125;)&#x2F;g;</span><br><span class="line"></span><br><span class="line">       &#x2F;&#x2F;   方法1.   function 1值匹配结果,后面的值表示捕获组</span><br><span class="line">       &#x2F;&#x2F; p &#x3D; p.replace(regs, function (match, g1, g2, g3) &#123;</span><br><span class="line">       &#x2F;&#x2F;     console.log(match, g1, g2, g3);</span><br><span class="line">       &#x2F;&#x2F;     </span><br><span class="line">       &#x2F;&#x2F;     return &#96;$&#123;g1&#125;&#x2F;$&#123;g2&#125;&#x2F;$&#123;g3&#125;&#96;</span><br><span class="line">       &#x2F;&#x2F; &#125;);</span><br><span class="line"></span><br><span class="line">       &#x2F;&#x2F; 方法2. 使用特殊符号 &#x2F;$1 表示捕获组1 $1前后添加数据为替换值</span><br><span class="line">       p &#x3D; p.replace(regs, &quot;&#x2F;$1&#x2F;$2&#x2F;$3&quot;);</span><br><span class="line">       console.log(p);</span><br></pre></td></tr></table></figure>
+<pre><code> // 方法replace()--替换 也可以使用捕获组 例题：把一个日期中的横杠换成斜杠 但两个日期间的符号不改变
+ 
+        var p = &quot;2020-6-26,-2020-5-1,2020-11-2,-2020-11-15&quot;;
+        var regs = /(\d&#123;4&#125;)-(\d&#123;1,2&#125;)-(\d&#123;1,2&#125;)/g;
+
+        //   方法1.   function 1值匹配结果,后面的值表示捕获组
+        // p = p.replace(regs, function (match, g1, g2, g3) &#123;
+        //     console.log(match, g1, g2, g3);
+        //     
+        //     return `$&#123;g1&#125;/$&#123;g2&#125;/$&#123;g3&#125;`
+        // &#125;);
+
+        // 方法2. 使用特殊符号 /$1 表示捕获组1 $1前后添加数据为替换值
+        p = p.replace(regs, &quot;/$1/$2/$3&quot;);
+        console.log(p);
+</code></pre>
 <h3 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h3><p>释义：重复正则匹配上一次的匹配结果满足该要求才为匹配项</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;例题：</span><br><span class="line"> var reg &#x3D; &#x2F;(\d&#123;2&#125;)\1&#x2F;; &#x2F;&#x2F;释义： 匹配两个数字并重复一次的</span><br><span class="line">        var s &#x3D; &quot;1212&quot;;</span><br><span class="line">        var s2 &#x3D; &quot;1213&quot;</span><br><span class="line">        console.log(reg.test(s));  &#x2F;&#x2F;true</span><br><span class="line">        &#x2F;&#x2F; console.log(reg.test(s2));  &#x2F;&#x2F;false</span><br></pre></td></tr></table></figure>
+<pre><code>//例题：
+ var reg = /(\d&#123;2&#125;)\1/; //释义： 匹配两个数字并重复一次的
+        var s = &quot;1212&quot;;
+        var s2 = &quot;1213&quot;
+        console.log(reg.test(s));  //true
+        // console.log(reg.test(s2));  //false
+</code></pre>
 <h3 id="正向断言-预查"><a href="#正向断言-预查" class="headerlink" title="正向断言(预查)"></a>正向断言(预查)</h3><p>检查某个字符后面的字符是否满足某个规则，该规则不成为匹配结果，并且不称为捕获组</p>
 <h3 id="负向断言-预查"><a href="#负向断言-预查" class="headerlink" title="负向断言(预查)"></a>负向断言(预查)</h3><p>检查某个字符后面的字符是否不满足某个规则，该规则不成为匹配结果，并且不称为捕获组</p>
 
@@ -1462,14 +1524,13 @@
     });
 </script>
 
-    
+                            
 
-</main>
+                </main>
 
+                
 
-
-
-    <footer class="page-footer bg-color">
+                            <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
@@ -1547,7 +1608,7 @@
                                     
                                         &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
                                             class="white-color">
-                                            7.6k
+                                            7.5k
                                         </span>&nbsp;字
                                         
                                             <!-- 访问量 -->
@@ -1725,7 +1786,7 @@
 
 <div class="progress-bar"></div>
 
-    <!-- 搜索遮罩框 -->
+                                <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
@@ -1829,7 +1890,7 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
+                                    <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
@@ -1837,16 +1898,22 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
 
-    <!-- Baidu Analytics -->
+                                        <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
+                                            <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -1862,38 +1929,51 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
 
-    
+                                                                
 
-    
+                                                                        
 
-    <!--腾讯兔小巢-->
-    
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
-            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
-        </div>
-    
-    
-    <script type="text/javascript" color="0,0,0"
-        pointColor="255,0,0" opacity='1'
-        zIndex="-1" count="199"
-        src="/libs/background/canvas-nest.js"></script>
-    
+                                                                                <!--腾讯兔小巢-->
+                                                                                
+                                                                                    <div
+                                                                                        style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+                                                                                        <a title="兔小巢"
+                                                                                            target="_blank" rel="noopener" href="https://support.qq.com/products/"><i
+                                                                                                class="fa fa-comments fa-3x"
+                                                                                                aria-hidden="true"></i></a>
+                                                                                    </div>
+                                                                                    
+                                                                                        
+                                                                                            <script
+                                                                                                type="text/javascript"
+                                                                                                color="0,0,0"
+                                                                                                pointColor="255,0,0"
+                                                                                                opacity='1'
+                                                                                                zIndex="-1"
+                                                                                                count="199"
+                                                                                                src="/libs/background/canvas-nest.js"></script>
+                                                                                            
 
-    
+                                                                                                
 
-    
+                                                                                                            
 
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+                                                                                                                    
+                                                                                                                        <script
+                                                                                                                            src="/libs/instantpage/instantpage.js"
+                                                                                                                            type="module"></script>
+                                                                                                                        
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
+                <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
 
 </html>

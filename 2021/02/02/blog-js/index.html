@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
+    
 
-
-<body>
-    <header class="navbar-fixed">
+                <body>
+                    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -428,9 +428,9 @@
 
 </header>
 
-    
+                        
 
-
+        
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
@@ -445,12 +445,12 @@
 </div>
 
 
+            
 
+                <main class="post-container content">
 
-<main class="post-container content">
-
-    
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+                    
+                        <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -596,7 +596,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    518
+                    452
                 </div>
                 
 
@@ -623,10 +623,77 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Date对象方法"><a href="#Date对象方法" class="headerlink" title="Date对象方法"></a>Date对象方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 注意月是从0开始的 星期天也是0</span><br><span class="line">        var d &#x3D; new Date();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 从 Date 对象以四位数字返回年份</span><br><span class="line">        console.log(d.getFullYear());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 从 Date 对象返回月份(0 ~11) </span><br><span class="line">        console.log(d.getMonth());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 从 Date 对象返回一个月中的某一天(1 ~31) 无闰平年判断</span><br><span class="line">        console.log(d.getDate());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 从 Date 对象返回一周中的某一天 (0 ~ 6) 0为星期天</span><br><span class="line">        console.log(d.getDay());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回 Date 对象的小时(0 ~23) </span><br><span class="line">        console.log(d.getHours());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回 Date 对象的分钟(0 ~59) </span><br><span class="line">        console.log(d.getMinutes());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回 Date 对象的秒数(0 ~59) </span><br><span class="line">        console.log(d.getSeconds());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回 Date 对象的毫秒(0 ~999) </span><br><span class="line">        console.log(d.getMilliseconds());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 得到时间戳 返回 1970 年 1 月 1 日至今的毫秒数</span><br><span class="line">        console.log(d.getTime());</span><br></pre></td></tr></table></figure>
-<h2 id="格林威治时间-UTC"><a href="#格林威治时间-UTC" class="headerlink" title="格林威治时间 UTC"></a>格林威治时间 UTC</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加UTC表示：格林威治时间 年时分秒 同理</span><br><span class="line">console.log(d.getUTCDate());</span><br><span class="line">console.log(d.getUTCFullYear());</span><br><span class="line">console.log(d.getUTCMonth());</span><br></pre></td></tr></table></figure>
-<h2 id="自定义时间-set"><a href="#自定义时间-set" class="headerlink" title="自定义时间 set"></a>自定义时间 set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var p &#x3D; new Date();</span><br><span class="line">&#x2F;&#x2F; 加set表示：设置时间 年时分秒 同理</span><br><span class="line">&#x2F;&#x2F; console.log(p.setDate(10));  &#x2F;&#x2F;得到新时间</span><br><span class="line">&#x2F;&#x2F; console.log(p);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 设置年份 在此同时也可以设置月和天</span><br><span class="line">&#x2F;&#x2F; console.log(p.setFullYear(2020, 0, 1));</span><br><span class="line">&#x2F;&#x2F; console.log(p);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 设置概览</span><br><span class="line">console.log(p.setFullYear(2020));   &#x2F;&#x2F;年</span><br><span class="line">console.log(p.setMonth(3)); &#x2F;&#x2F;月</span><br><span class="line">console.log(p.setDate(4));  &#x2F;&#x2F;日</span><br><span class="line">console.log(p.setHours(12));  &#x2F;&#x2F;时</span><br><span class="line">console.log(p.setMinutes(40));  &#x2F;&#x2F;分</span><br><span class="line">console.log(p.setSeconds(35));    &#x2F;&#x2F;秒</span><br><span class="line">console.log(p.setMilliseconds(200));    &#x2F;&#x2F;毫秒</span><br><span class="line">console.log(p);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F; 把 Date 对象转换为字符串</span><br><span class="line">console.log(p.toString());</span><br><span class="line">&#x2F;&#x2F; 把 Date 对象的时间部分转换为字符串</span><br><span class="line">console.log(p.toTimeString());</span><br><span class="line">&#x2F;&#x2F; 把 Date 对象的日期部分转换为字符串</span><br><span class="line">console.log(p.toDateString());</span><br><span class="line">&#x2F;&#x2F; 根据本地时间格式，把 Date 对象的时间部分转</span><br><span class="line">console.log(p.toLocaleString());</span><br><span class="line">&#x2F;&#x2F; 根据本地时间格式，把 Date 对象的日期部分转换为字符串</span><br><span class="line">console.log(p.toLocaleDateString());</span><br><span class="line">&#x2F;&#x2F; 使用 ISO 标准返回字符串的日期格式</span><br><span class="line">console.log(p.toISOString());</span><br></pre></td></tr></table></figure>
+                <h1 id="Date对象方法"><a href="#Date对象方法" class="headerlink" title="Date对象方法"></a>Date对象方法</h1><pre><code>// 注意月是从0开始的 星期天也是0
+        var d = new Date();
+
+        // 从 Date 对象以四位数字返回年份
+        console.log(d.getFullYear());
+
+        // 从 Date 对象返回月份(0 ~11) 
+        console.log(d.getMonth());
+
+        // 从 Date 对象返回一个月中的某一天(1 ~31) 无闰平年判断
+        console.log(d.getDate());
+
+        // 从 Date 对象返回一周中的某一天 (0 ~ 6) 0为星期天
+        console.log(d.getDay());
+
+        // 返回 Date 对象的小时(0 ~23) 
+        console.log(d.getHours());
+
+        // 返回 Date 对象的分钟(0 ~59) 
+        console.log(d.getMinutes());
+
+        // 返回 Date 对象的秒数(0 ~59) 
+        console.log(d.getSeconds());
+
+        // 返回 Date 对象的毫秒(0 ~999) 
+        console.log(d.getMilliseconds());
+
+        // 得到时间戳 返回 1970 年 1 月 1 日至今的毫秒数
+        console.log(d.getTime());
+</code></pre>
+<h2 id="格林威治时间-UTC"><a href="#格林威治时间-UTC" class="headerlink" title="格林威治时间 UTC"></a>格林威治时间 UTC</h2><pre><code>
+
+        // 加UTC表示：格林威治时间 年时分秒 同理
+        console.log(d.getUTCDate());
+        console.log(d.getUTCFullYear());
+        console.log(d.getUTCMonth());
+</code></pre>
+<h2 id="自定义时间-set"><a href="#自定义时间-set" class="headerlink" title="自定义时间 set"></a>自定义时间 set</h2><pre><code>
+        var p = new Date();
+        // 加set表示：设置时间 年时分秒 同理
+        // console.log(p.setDate(10));  //得到新时间
+        // console.log(p);
+
+        // 设置年份 在此同时也可以设置月和天
+        // console.log(p.setFullYear(2020, 0, 1));
+        // console.log(p);
+
+        // 设置概览
+        console.log(p.setFullYear(2020));   //年
+        console.log(p.setMonth(3)); //月
+        console.log(p.setDate(4));  //日
+        console.log(p.setHours(12));  //时
+        console.log(p.setMinutes(40));  //分
+        console.log(p.setSeconds(35));    //秒
+        console.log(p.setMilliseconds(200));    //毫秒
+        console.log(p);
+</code></pre>
+<pre><code>
+        // 把 Date 对象转换为字符串
+        console.log(p.toString());
+        // 把 Date 对象的时间部分转换为字符串
+        console.log(p.toTimeString());
+        // 把 Date 对象的日期部分转换为字符串
+        console.log(p.toDateString());
+        // 根据本地时间格式，把 Date 对象的时间部分转
+        console.log(p.toLocaleString());
+        // 根据本地时间格式，把 Date 对象的日期部分转换为字符串
+        console.log(p.toLocaleDateString());
+        // 使用 ISO 标准返回字符串的日期格式
+        console.log(p.toISOString());
+</code></pre>
 <p><img src="https://i.loli.net/2021/03/02/OjCM1YSFZkN3URc.jpg" alt="IU"></p>
 
                 
@@ -1393,14 +1460,13 @@
     });
 </script>
 
-    
+                            
 
-</main>
+                </main>
 
+                
 
-
-
-    <footer class="page-footer bg-color">
+                            <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
@@ -1478,7 +1544,7 @@
                                     
                                         &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
                                             class="white-color">
-                                            7.6k
+                                            7.5k
                                         </span>&nbsp;字
                                         
                                             <!-- 访问量 -->
@@ -1656,7 +1722,7 @@
 
 <div class="progress-bar"></div>
 
-    <!-- 搜索遮罩框 -->
+                                <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
@@ -1760,7 +1826,7 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
+                                    <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
@@ -1768,16 +1834,22 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
 
-    <!-- Baidu Analytics -->
+                                        <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
+                                            <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -1793,38 +1865,51 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
 
-    
+                                                                
 
-    
+                                                                        
 
-    <!--腾讯兔小巢-->
-    
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
-            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
-        </div>
-    
-    
-    <script type="text/javascript" color="0,0,0"
-        pointColor="255,0,0" opacity='1'
-        zIndex="-1" count="199"
-        src="/libs/background/canvas-nest.js"></script>
-    
+                                                                                <!--腾讯兔小巢-->
+                                                                                
+                                                                                    <div
+                                                                                        style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+                                                                                        <a title="兔小巢"
+                                                                                            target="_blank" rel="noopener" href="https://support.qq.com/products/"><i
+                                                                                                class="fa fa-comments fa-3x"
+                                                                                                aria-hidden="true"></i></a>
+                                                                                    </div>
+                                                                                    
+                                                                                        
+                                                                                            <script
+                                                                                                type="text/javascript"
+                                                                                                color="0,0,0"
+                                                                                                pointColor="255,0,0"
+                                                                                                opacity='1'
+                                                                                                zIndex="-1"
+                                                                                                count="199"
+                                                                                                src="/libs/background/canvas-nest.js"></script>
+                                                                                            
 
-    
+                                                                                                
 
-    
+                                                                                                            
 
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+                                                                                                                    
+                                                                                                                        <script
+                                                                                                                            src="/libs/instantpage/instantpage.js"
+                                                                                                                            type="module"></script>
+                                                                                                                        
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
+                <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
 
 </html>

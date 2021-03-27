@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
+    
 
-
-<body>
-    <header class="navbar-fixed">
+                <body>
+                    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -428,9 +428,9 @@
 
 </header>
 
-    
+                        
 
-
+        
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
@@ -445,12 +445,12 @@
 </div>
 
 
+            
 
+                <main class="post-container content">
 
-<main class="post-container content">
-
-    
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+                    
+                        <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -596,7 +596,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    478
+                    467
                 </div>
                 
 
@@ -634,7 +634,37 @@
 </li>
 </ul>
 <h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>事件流：当某个事件发生的时候，哪些元素会监听到该事件发生，这些元素发生该事件的顺序。<br><img src="https://i.loli.net/2021/03/15/zCTZXKUvgYqyjSA.jpg" alt="事件流"><br><strong>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span></span><br><span class="line">        点击我</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 给button注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;button&quot;</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;button&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给div注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;div&quot;</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;div&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给body注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;body&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给html注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.documentElement.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;html&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 给整个文档注册点击事件</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;document&quot;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-html"><code class="language-html">
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>
+            点击我
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token comment" spellcheck="true">// 给button注册点击事件</span>
+        document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 给div注册点击事件</span>
+        document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 给body注册点击事件</span>
+        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 给html注册点击事件</span>
+        document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"html"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 给整个文档注册点击事件</span>
+        document<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"document"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
 <p>以上输出的结果依次为button&gt;div&gt;body&gt;html&gt;document<br>事件流的演示  运行顺序（默认情况下）：冒泡方式触发-从里到外<br>当一个元素发生了某个事件时，那该元素的所有祖先元素都发生了该事件</p>
 <p>微软看法：事件冒泡：先触发最里层的元素，然后再依次触发外层元素<br>网景看法：事件捕获：先触发外层的元素，然后再依次触发里面元素</p>
 <blockquote>
@@ -1408,14 +1438,13 @@
     });
 </script>
 
-    
+                            
 
-</main>
+                </main>
 
+                
 
-
-
-    <footer class="page-footer bg-color">
+                            <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
@@ -1493,7 +1522,7 @@
                                     
                                         &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
                                             class="white-color">
-                                            7.6k
+                                            7.5k
                                         </span>&nbsp;字
                                         
                                             <!-- 访问量 -->
@@ -1671,7 +1700,7 @@
 
 <div class="progress-bar"></div>
 
-    <!-- 搜索遮罩框 -->
+                                <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
@@ -1775,7 +1804,7 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
+                                    <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
@@ -1783,16 +1812,22 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
 
-    <!-- Baidu Analytics -->
+                                        <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
+                                            <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -1808,38 +1843,51 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
 
-    
+                                                                
 
-    
+                                                                        
 
-    <!--腾讯兔小巢-->
-    
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
-            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
-        </div>
-    
-    
-    <script type="text/javascript" color="0,0,0"
-        pointColor="255,0,0" opacity='1'
-        zIndex="-1" count="199"
-        src="/libs/background/canvas-nest.js"></script>
-    
+                                                                                <!--腾讯兔小巢-->
+                                                                                
+                                                                                    <div
+                                                                                        style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+                                                                                        <a title="兔小巢"
+                                                                                            target="_blank" rel="noopener" href="https://support.qq.com/products/"><i
+                                                                                                class="fa fa-comments fa-3x"
+                                                                                                aria-hidden="true"></i></a>
+                                                                                    </div>
+                                                                                    
+                                                                                        
+                                                                                            <script
+                                                                                                type="text/javascript"
+                                                                                                color="0,0,0"
+                                                                                                pointColor="255,0,0"
+                                                                                                opacity='1'
+                                                                                                zIndex="-1"
+                                                                                                count="199"
+                                                                                                src="/libs/background/canvas-nest.js"></script>
+                                                                                            
 
-    
+                                                                                                
 
-    
+                                                                                                            
 
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+                                                                                                                    
+                                                                                                                        <script
+                                                                                                                            src="/libs/instantpage/instantpage.js"
+                                                                                                                            type="module"></script>
+                                                                                                                        
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
+                <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"footer","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"permalink_pinyin":{"enable":true,"separator":"-"},"log":false});</script></body>
 
 </html>
