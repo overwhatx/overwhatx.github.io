@@ -4,7 +4,34 @@
   
     
     <entry>
-      <title>Hexo-新建文章模板</title>
+      <title>DOM事件对象</title>
+      <link href="2021/04/13/blog-js-11/"/>
+      <url>2021/04/13/blog-js-11/</url>
+      
+        <content type="html"><![CDATA[<h1 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h1><p>事件对象封装了事件的相关信息</p><h2 id="获取事件对象"><a href="#获取事件对象" class="headerlink" title="获取事件对象"></a>获取事件对象</h2><ul><li>通过事件处理函数的参数获取</li><li>旧版本的IE浏览器通过window.event获取</li><li>window.event -获取鼠标事件</li></ul><h2 id="事件对象的通用成员"><a href="#事件对象的通用成员" class="headerlink" title="事件对象的通用成员"></a>事件对象的通用成员</h2><ol><li>target &amp; srcElement * -获取事件目标（事件源）</li></ol><ul><li><p>tagName -获取元素名称<br>  可以用来做事件委托：通过给祖先元素注册事件，在程序处理程序中判断事件源进行不同的处理。</p><p>  通常，事件委托用于动态生成元素的区域。元素内容比较繁杂区域使用较麻烦</p></li></ul><ol start="2"><li>currentTarget * -当前目标：获取绑定事件的元素，等效于this</li></ol><ul><li>type  用于获取当前事件的类型</li></ul><ol start="3"><li><p>preventDefault &amp; returnValue -阻止浏览器默认行为。例如：a元素的链接跳转 button的提交等</p><p> dom2使用preventDefault方法<br> dom0的方式：在事件处理程序中返回false</p><p> 针对a元素，可以设置为功能性链接解决跳转问题</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>  </code></pre><p> 针对button元素，可以将button设置为普通的按钮[type=”button”]</p></li><li><p>stopPropagation方法 * -阻止事件冒泡</p></li><li><p>eventPhase -得到事件所处的阶段</p></li></ol><p>结果为：1、2、3<br>1为：事件捕获 阶段<br>2为：事件目标 阶段<br>3为：事件冒泡 阶段</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo-优化</title>
       <link href="2021/03/09/hexo-note/"/>
       <url>2021/03/09/hexo-note/</url>
       
@@ -346,9 +373,9 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> Date </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -373,9 +400,9 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> Date </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       

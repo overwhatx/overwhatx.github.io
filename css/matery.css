@@ -181,6 +181,10 @@ code {
     height: 0;
 }
 
+pre {
+    background-color: #272822;
+}
+
 pre code {
     padding: 0;
     color: #e8eaf6;
