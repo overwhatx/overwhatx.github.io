@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>鼠标事件和键盘事件</title>
+      <link href="2021/04/14/blog-js-12/"/>
+      <url>2021/04/14/blog-js-12/</url>
+      
+        <content type="html"><![CDATA[<h1 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h1><h2 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h2><ul><li><p>click：用户单击主鼠标按钮（一般是左键）或者按下在聚焦时按下回车键时触发</p></li><li><p>dblclick：用户双击主鼠标按键触发（频率取决于系统配置）</p></li><li><p>mousedown：用户按下鼠标任意按键时触发</p></li><li><p>mouseup：用户抬起鼠标任意按键时触发</p></li><li><p>mousemove：鼠标在元素上移动时触发 </p></li><li><p>mouseover：鼠标进入元素时触发 会冒泡</p></li><li><p>mouseout：鼠标离开元素时触发  会冒泡</p></li><li><p>mouseenter：鼠标进入元素时触发，该事件不会冒泡</p></li><li><p>mouseleave：鼠标离开元素时触发，该事件不会冒泡</p></li></ul><p>区别：</p><ul><li>over和out，不考虑子元素，从父元素移动到子元素，对于父元素而言，仍然算作离开</li><li>enter和leave，考虑子元素，子元素仍然是父元素的一部分</li><li>mouseenter和mouseleave不会冒泡</li><li>bubbles -检测是否会冒泡</li></ul><h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>所有的鼠标事件，事件处理程序中的事件对象，都为 MouseEvent</p><ul><li>altKey：触发事件时，是否按下了键盘的alt键</li><li>ctrlKey：触发事件时，是否按下了键盘的ctrl键</li><li>shiftKey：触发事件时，是否按下了键盘的shift键</li><li>button：触发事件时，鼠标按键类型<ul><li>0：左键</li><li>1：中键</li><li>2：右键</li></ul></li></ul><p>位置：</p><ul><li>page：pageX、pageY，当前鼠标距离页面的横纵坐标</li><li>client: clientX、clientY，鼠标相对于视口的坐标</li><li>offset：offsetX、offsetY，鼠标相对于事件源的内边距的坐标</li><li>screen: screenX、screenY，鼠标相对于屏幕</li><li>x、y，等同于clientX、clientY</li><li>movement：movementX、movementY，只在鼠标移动事件中有效，相对于上一次鼠标位置，偏移的距离</li></ul><h1 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h1><h2 id="事件类型-1"><a href="#事件类型-1" class="headerlink" title="事件类型"></a>事件类型</h2><ul><li>keydown：按下键盘上任意键触发，如果按住不放，会重复触发此事件</li><li>keypress：按下键盘上一个<strong>字符键</strong>时触发 键盘按键被按下并释放一个键时发生</li><li>keyup：抬起键盘上任意键触发</li></ul><p>KeyDown中返回的是键盘的代码, 而KeyPress返回的是ASCII字符.<br>keydown、keypress 如果阻止了事件默认行为，文本不会显示。</p><h2 id="事件对象-1"><a href="#事件对象-1" class="headerlink" title="事件对象"></a>事件对象</h2><p>KeyboardEvent</p><ul><li>code：得到按键字符串，适配键盘布局。</li><li>key：得到按键字符串，不适配键盘布局。能得到打印字符。</li><li>keyCode、which：得到键盘编码</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DOM事件对象</title>
       <link href="2021/04/13/blog-js-11/"/>
       <url>2021/04/13/blog-js-11/</url>
