@@ -4,7 +4,34 @@
   
     
     <entry>
-      <title>鼠标事件和键盘事件</title>
+      <title>DOM其他事件</title>
+      <link href="2021/04/15/blog-js-13/"/>
+      <url>2021/04/15/blog-js-13/</url>
+      
+        <content type="html"><![CDATA[<h1 id="DOM其他事件"><a href="#DOM其他事件" class="headerlink" title="DOM其他事件"></a>DOM其他事件</h1><h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul><li>focus：元素聚焦的时候触发（能与用户发生交互的元素，都可以聚焦），该事件不会冒泡</li><li>blur：元素失去焦点时触发，该事件不会冒泡。</li><li>submit：提交表单事件，仅在form元素有效。</li><li>change：文本改变事件  文本内容改变后触发 一次性触发</li><li>input: 文本改变事件，文本内容改变后触发  即时触发</li></ul><h2 id="其他事件"><a href="#其他事件" class="headerlink" title="其他事件"></a>其他事件</h2><p>window全局对象</p><ul><li><p>load  加载完毕所有的资源后触发该事件<br>  load 用于给单独的元素添加事件比较好 给整个文档注册该事件 猴年马月都难得到值<br>  window使用load：页面中所有资源全部加载完毕的事件<br>  媒体元素使用load：媒体资源加载完毕的事件    </p></li><li><p>DOMContentLoaded、readystatechange</p><blockquote><p>浏览器渲染页面的过程：</p><ol><li>得到页面源代码</li><li>创建document节点</li><li>从上到下，将元素依次添加到dom树中，每添加一个元素，进行预渲染</li><li>按照结构，依次渲染子节点</li></ol></blockquote></li></ul><blockquote><p>html文档中音频视频图片都是异步加载的 未加载完也会继续执行下面的代码</p></blockquote><p>document的DOMContentLoaded: dom树构建完成后发生</p><p>readystate: loading、interactive、complete</p><p>interactive：触发DOMContentLoaded事件</p><p>complete：触发window的load事件</p><p><strong>js代码应该尽量写到页面底部</strong></p><ul><li>css应该写到页面顶部：避免出现闪烁（如果放到页面底部，会导致元素先没有样式，使用丑陋的默认样式，然后当读到css文件后，重新改变样式）</li><li>JS应该写到页面底部：避免阻塞后续的渲染，也避免运行JS时，得不到页面中的元素。</li></ul><p>大多浏览器不支持 了解即可<br>beforeunload事件: window的事件，关闭窗口时运行，可以阻止关闭窗口<br>unload：window的事件，关闭窗口时运行</p><ul><li><p>scroll事件：窗口发生滚动时运行的事件</p><p>  通过scrollTop和scrollLeft，可以获取和设置滚动距离。</p></li><li><p>resize 窗口尺寸发生改变时运行的事件，监听的是视口尺寸</p></li><li><p>contextmenu 右键菜单事件</p></li><li><p>paste 粘贴事件</p></li><li><p>copy 复制事件</p></li><li><p>cut 剪切事件</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DOM鼠标事件和键盘事件</title>
       <link href="2021/04/14/blog-js-12/"/>
       <url>2021/04/14/blog-js-12/</url>
       
