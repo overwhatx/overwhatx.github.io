@@ -4,51 +4,11 @@
   
     
     <entry>
-      <title></title>
-      <link href="2021/04/18/blog-js-1/"/>
-      <url>2021/04/18/blog-js-1/</url>
-      
-        <content type="html"><![CDATA[<h1 id="JS语言概述"><a href="#JS语言概述" class="headerlink" title="JS语言概述"></a>JS语言概述</h1><h2 id="JS语言简史"><a href="#JS语言简史" class="headerlink" title="JS语言简史"></a>JS语言简史</h2><ol><li>JS语言的起源</li></ol><p>网景（Netscape Communication Corperation），1994年，推出第一款商用浏览器，网景浏览器（Netscape Navigator）</p><p>1995年，网景公司决定在浏览器中加入一门语言，可以作交互效果，提高用户体验。</p><p>最终决定独立开发一门新的语言，聘请Brendan Eich，10天后，新的语言诞生</p><p>LiveScript -&gt; JavaScript (JS)</p><p><strong>JS语言之父：Brendan Eich</strong></p><ol start="2"><li>第一次浏览器大战</li></ol><p>网景公司打算在浏览器中加入网络操作系统，影响到微软的利益，引起了微软的注意</p><p>1995年，微软发布IE浏览器。</p><p>JS语言推出之后，网景获得极大的竞争优势。</p><p>微软对JS语言反编译，借鉴JS语言，推出了JScript、VBScript</p><p>第一次浏览器大战是标准之争</p><p>1997，网景公司将javascript1.1版本提交给ECMA（欧洲计算机制造协会）</p><p>IE3发布，并绑定windows操作系统。</p><p>1998年，网景公司，被收购。</p><p><strong>ECMA收录了JavaScript，并提交给ISO，经过修改，成为了第一个JS的标准版本，成为ECMAScript，简称ES</strong></p><h3 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h3><ul><li>两个公司的两个版本的javascript语言备受业界关注，ECMA协会制定了一个名为ECMAScript的标准。</li><li>ECMA定义的只是这门语言的基础，在此基础上可以构建更加完善的脚本语言。</li><li>web浏览器只是ECMAScript实现的宿主环境之一，宿主环境提供基本的ECMAScript的实现，同时也会提供扩展，例如DOM，其他的宿主环境还有(node)</li><li>ECMA标准没有参照浏览器，而是规定了语言的语法，类型，语句，关键字，保留字，操作符，对象。</li><li>ECMAScript就是对实现了该标准的规定的各个方面内容的语言的描述(javascript和ActionScript都实现了该标准)</li><li>ECMAScript的前两个版本没有很多重要的变化，第三个版本才是一次真正意义上的修改涉及到了很多内容，因此第三版标志着ECMAScript成为了一门真正的编程语言</li><li>2009年发布了ECMAScript的第五个版本。</li></ul><ol start="3"><li>第二次浏览器大战</li></ol><p>IE4、IE5、IE6（windows xp）</p><p>微软决定解散浏览器团队。</p><p>Brendan Eich，带领团队成立Mozilla基金会，并决定，将网景浏览器开源。</p><p>长时间内，世界的技术爱好者，对网景浏览器，进行维护和打补丁</p><p>2002，Mozilla推出firefox浏览器。</p><p>2008，谷歌推出chrome浏览器，苹果推出safari，ASA公司推出opera</p><p>chrome浏览器搭载JS执行引擎V8（V8引擎，可以将JS代码直接转换为字节码，理论上，JS代码的执行速度已经接近汇编语言）</p><p>于是，JS具备了编写大型应用程序的能力，甚至服务器应用</p><blockquote><p>Ryan Dahl 准备写一个服务器端的框架，直接利用V8引擎完成了该框架，该框架，称为nodejs</p></blockquote><p><strong>V8引擎，将JS的执行推向了一个新的台阶</strong></p><ol><li>ES标准的发展</li></ol><p>ES1，1997年<br>ES2，1998年<br>ES3，1999年<br>ES5，2009年，习惯上，不再区分 javascript （JS） 和 ECMAScript （ES）<br>ES6，2015年，ECMA宣布，从ES6开始，使用年号作为版本号，ES6的真正称呼为：ES2015<br>ES7，2016年，ES2016</p><p><strong>非常重要：ES制定语言标准，不涉及语言的运行环境。正是因为ES避免了运行环境，就让ES有机会在各种环境中执行。ES称为了通用编程语言</strong></p><p><strong>通常，把ES运行的环境称之为，宿主环境</strong></p><h2 id="JS语言特性"><a href="#JS语言特性" class="headerlink" title="JS语言特性"></a>JS语言特性</h2><blockquote><ol><li>解释型语言</li></ol></blockquote><p>编译型语言：C语言、C++、java语言、C#语言</p><p>编译型语言会经过一个翻译的过程，负责翻译的叫做编译器，翻译的结果，叫做编译结果。</p><p>优点：执行速度快<br>缺点：某个编译结果，难以适用于各种环境（跨平台障碍）；部署繁琐；</p><p>解释型语言：js、php</p><p>解释型语言没有编译结果</p><p>优点：跨平台；部署简单；<br>缺点：执行速度稍慢  </p><blockquote><ol start="2"><li>弱类型语言</li></ol></blockquote><p>弱类型：存放的数据类型可变。优点：灵活、易上手； 缺点：不严谨</p><p>强类型：存放的数据类型不可变。优点：严谨；缺点：不灵活、不易上手</p><blockquote><p>通常，将弱类型的解释型语言，称为脚本语言</p></blockquote><blockquote><ol start="3"><li>单线程</li></ol></blockquote><p>同步现象：上一件事情没有做完，下一件事情必须等待。</p><blockquote><ol start="4"><li>异步</li></ol></blockquote><p>提高单线程的执行效率。</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo-优化</title>
       <link href="2021/03/09/hexo-note/"/>
       <url>2021/03/09/hexo-note/</url>
       
         <content type="html"><![CDATA[<h2 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板:"></a>新建文章模板:</h2><pre><code>title: &#123;&#123; title &#125;&#125;  #文章标题date: &#123;&#123; date &#125;&#125;    #文件创建时间author:             #文章作者img: 直接填链接      #文章封面图coverImg:直接填链接  #当本文章在首页轮播时需要显示的图片top: false          #文章是否置顶cover: false        #表示该文章是否需要加入到首页轮播封面中toc: true           #约束mathjax: false      #是否开启数学公式支持password:           #设置阅读文章验证密码 不填写默认没有summary:            #自定义的文章摘要内容 不填写则为文章首内容 categories:         #文章分类 只能写一个tags:               #文章标签 能写多个    -文章标签1    -文章标签2</code></pre><h2 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h2><h3 id="valine评论系统"><a href="#valine评论系统" class="headerlink" title="valine评论系统"></a>valine评论系统</h3><p>Valine 官方文档 <a href="https://valine.js.org/">https://valine.js.org/</a></p><ol><li>注册 LeanCloud </li><li>在LeanCloud中添加应用 添加开发版</li><li>点击设置&gt;应用keys</li><li>复制keys中 appID值和appKey值</li><li>粘贴到主题目录下配置文件中   _config.yml下的valine配置<br>valine:<br>enable: true #true为开启<br>appId: 粘贴对应的值<br>appKey: 粘贴对应的值</li></ol><h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><ol><li>安装插件 指令如下<pre><code>npm i -S hexo-prism-plugin</code></pre></li><li>修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并添加代码如下：<pre><code>highlight:enable: false #改为falseline_number: trueauto_detect: falsetab_replace: &quot;&quot;wrap: truehljs: false</code></pre></li></ol><p>prism_plugin:<br>  mode: “preprocess” # realtime/preprocess<br>  theme: “tomorrow”<br>  line_number: false # default false<br>  custom_css:<br>```</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Blog </tag>
-            
-            <tag> Markdow </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>blog</title>
-      <link href="2021/02/17/blog-1/"/>
-      <url>2021/02/17/blog-1/</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -1252,6 +1212,31 @@
             <tag> JavaScript </tag>
             
             <tag> JavaScript语法基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS语言简史与概述</title>
+      <link href="2021/01/02/blog-js-1/"/>
+      <url>2021/01/02/blog-js-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JS语言概述"><a href="#JS语言概述" class="headerlink" title="JS语言概述"></a>JS语言概述</h1><h2 id="JS语言简史"><a href="#JS语言简史" class="headerlink" title="JS语言简史"></a>JS语言简史</h2><ol><li>JS语言的起源</li></ol><p>网景（Netscape Communicati</p><p>on Corperation），1994年，推出第一款商用浏览器，网景浏览器（Netscape Navigator）</p><p>1995年，网景公司决定在浏览器中加入一门语言，可以作交互效果，提高用户体验。</p><p>最终决定独立开发一门新的语言，聘请Brendan Eich，10天后，新的语言诞生</p><p>LiveScript -&gt; JavaScript (JS)</p><p><strong>JS语言之父：Brendan Eich</strong></p><ol start="2"><li>第一次浏览器大战</li></ol><p>网景公司打算在浏览器中加入网络操作系统，影响到微软的利益，引起了微软的注意</p><p>1995年，微软发布IE浏览器。</p><p>JS语言推出之后，网景获得极大的竞争优势。</p><p>微软对JS语言反编译，借鉴JS语言，推出了JScript、VBScript</p><p>第一次浏览器大战是标准之争</p><p>1997，网景公司将javascript1.1版本提交给ECMA（欧洲计算机制造协会）</p><p>IE3发布，并绑定windows操作系统。</p><p>1998年，网景公司，被收购。</p><p><strong>ECMA收录了JavaScript，并提交给ISO，经过修改，成为了第一个JS的标准版本，成为ECMAScript，简称ES</strong></p><h3 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h3><ul><li>两个公司的两个版本的javascript语言备受业界关注，ECMA协会制定了一个名为ECMAScript的标准。</li><li>ECMA定义的只是这门语言的基础，在此基础上可以构建更加完善的脚本语言。</li><li>web浏览器只是ECMAScript实现的宿主环境之一，宿主环境提供基本的ECMAScript的实现，同时也会提供扩展，例如DOM，其他的宿主环境还有(node)</li><li>ECMA标准没有参照浏览器，而是规定了语言的语法，类型，语句，关键字，保留字，操作符，对象。</li><li>ECMAScript就是对实现了该标准的规定的各个方面内容的语言的描述(javascript和ActionScript都实现了该标准)</li><li>ECMAScript的前两个版本没有很多重要的变化，第三个版本才是一次真正意义上的修改涉及到了很多内容，因此第三版标志着ECMAScript成为了一门真正的编程语言</li><li>2009年发布了ECMAScript的第五个版本。</li></ul><ol start="3"><li>第二次浏览器大战</li></ol><p>IE4、IE5、IE6（windows xp）</p><p>微软决定解散浏览器团队。</p><p>Brendan Eich，带领团队成立Mozilla基金会，并决定，将网景浏览器开源。</p><p>长时间内，世界的技术爱好者，对网景浏览器，进行维护和打补丁</p><p>2002，Mozilla推出firefox浏览器。</p><p>2008，谷歌推出chrome浏览器，苹果推出safari，ASA公司推出opera</p><p>chrome浏览器搭载JS执行引擎V8（V8引擎，可以将JS代码直接转换为字节码，理论上，JS代码的执行速度已经接近汇编语言）</p><p>于是，JS具备了编写大型应用程序的能力，甚至服务器应用</p><blockquote><p>Ryan Dahl 准备写一个服务器端的框架，直接利用V8引擎完成了该框架，该框架，称为nodejs</p></blockquote><p><strong>V8引擎，将JS的执行推向了一个新的台阶</strong></p><ol><li>ES标准的发展</li></ol><p>ES1，1997年<br>ES2，1998年<br>ES3，1999年<br>ES5，2009年，习惯上，不再区分 javascript （JS） 和 ECMAScript （ES）<br>ES6，2015年，ECMA宣布，从ES6开始，使用年号作为版本号，ES6的真正称呼为：ES2015<br>ES7，2016年，ES2016</p><p><strong>非常重要：ES制定语言标准，不涉及语言的运行环境。正是因为ES避免了运行环境，就让ES有机会在各种环境中执行。ES称为了通用编程语言</strong></p><p><strong>通常，把ES运行的环境称之为，宿主环境</strong></p><h2 id="JS语言特性"><a href="#JS语言特性" class="headerlink" title="JS语言特性"></a>JS语言特性</h2><blockquote><ol><li>解释型语言</li></ol></blockquote><p>编译型语言：C语言、C++、java语言、C#语言</p><p>编译型语言会经过一个翻译的过程，负责翻译的叫做编译器，翻译的结果，叫做编译结果。</p><p>优点：执行速度快<br>缺点：某个编译结果，难以适用于各种环境（跨平台障碍）；部署繁琐；</p><p>解释型语言：js、php</p><p>解释型语言没有编译结果</p><p>优点：跨平台；部署简单；<br>缺点：执行速度稍慢  </p><blockquote><ol start="2"><li>弱类型语言</li></ol></blockquote><p>弱类型：存放的数据类型可变。优点：灵活、易上手； 缺点：不严谨</p><p>强类型：存放的数据类型不可变。优点：严谨；缺点：不灵活、不易上手</p><blockquote><p>通常，将弱类型的解释型语言，称为脚本语言</p></blockquote><blockquote><ol start="3"><li>单线程</li></ol></blockquote><p>同步现象：上一件事情没有做完，下一件事情必须等待。</p><blockquote><ol start="4"><li>异步</li></ol></blockquote><p>提高单线程的执行效率。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
