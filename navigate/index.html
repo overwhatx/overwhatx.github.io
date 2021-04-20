@@ -454,7 +454,7 @@
             <form name="f" action="https://www.baidu.com/" target="_blank">
                 <div id="Select-2">
                     <div class="Select-box-2" id="baidu">
-                        <ul style="height: 46px;">
+                        <ul>
                             <li class="this_s">百 · 度</li>
                             <li class="bing_s">必 · 应</li>
                             <li class="google_s">谷 · 歌</li>
@@ -462,8 +462,8 @@
                         </ul>
                     </div> <input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text">
                 </div>
-                <div class="qingkong" id="qingkong" title="清 · 空" style="display: none;">x</div> <input value="搜 · 索"
-                    id="su-2" type="submit">
+                <div class="qingkong" id="qingkong" title="清 · 空" style="display: none;">x</div>
+                <input value="搜 · 索" id="su-2" type="submit">
                 <ul class="keylist"></ul>
             </form>
         </div> <!-- 链接 -->
@@ -570,7 +570,22 @@
                 </div>
             </div>
         </div>
-        <script> /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
+        <script>
+            /*选择搜索引擎*/
+            $('.Select-box ul').hover(function () { $(this).css('height', 'auto') },
+                function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') },
+                    function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () {
+                        var _tihs = $(this).attr('class');
+                        var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs);
+                        $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px')
+                    });
+            $('.Select-box-2 li').click(function () {
+                var _tihs = $(this).attr('class');
+                var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs);
+                $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px')
+            });
+           //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } }
+        </script>
     </div>
 </div>
 <style>
@@ -703,6 +718,7 @@
         padding: 13px 8px;
         opacity: 0.9;
         font-size: 15px;
+
     }
 
     #Select-2 {
@@ -716,74 +732,91 @@
     }
 
     .Select-box-2 ul {
-        height: 46px;
+        height: 45px;
         position: absolute;
         left: 0px;
-        top: 1px;
+        top: 0px;
         z-index: 9999;
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid #ccc;
+        background: #008c8c;
+        border: 1px solid #008c8c;
         border-top: none;
-        overflow: hidden
+        overflow: hidden;
+        color: #fff;
+
     }
 
     .Select-box-2 li {
         width: 60px;
         line-height: 46px;
         font-size: 15px;
-        color: #484848;
+        color: #fff;
         border: 0;
         cursor: pointer;
+        box-sizing: border-box;
+        border-bottom: 1px solid #0fb3b3;
+    }
+
+    .Select-box-2 li:last-of-type {
+        border: none;
+
     }
 
     .Select-box-2 li:hover {
-        background: #3385ff;
+        background: #016969;
         color: #FFF;
     }
 
     .Select-box-2 .this_s {
-        color: #317ef3;
+        color: #fff;
     }
 
     .Select-box-2 .this_s:hover {
         background: none;
-        color: #317ef3;
+        color: #fff;
     }
 
     #kw-2 {
         width: 335px;
+        height: 45px;
         outline: 0;
         border: 1px solid #ccc;
         background: rgba(255, 255, 255, 0.2);
         color: #000000;
         padding-left: 70px;
         font-weight: bold;
+        border: #008c8c solid 2px;
+        box-sizing: border-box;
     }
+
 
     /*修改搜索框样式*/
     #su-2 {
         width: 90px;
         background: #008c8c;
+        border-radius: 0 25px 25px 0;
         border: none;
-        border-top: #3385ff 1px solid;
-        border-bottom: 1px solid #0abdbd;
+        border-top: 1px solid #008c8c;
+        border-bottom: 1px solid #008c8c;
         color: #FFF;
         cursor: pointer;
         /*去轮廓阴影*/
         outline: none;
+
+
     }
 
     /*光标移动到搜索框颜色*/
     #su-2:hover {
-        background: blue;
-        border-bottom: 1px solid blue;
+        background: #016969;
+        border-bottom: 1px solid #016969;
+
     }
 
-    #su-2:active {
-        background: blue;
-        box-shadow: inset 1px 1px 3px blue;
-        -webkit-box-shadow: inset 1px 1px 3px blue;
-    }
+    /* #su-2:active {
+        background: #016969;
+        box-shadow: inset 1px 1px 3px #016969;
+        -webkit-box-shadow: inset 1px 1px 3px #016969;
+    } */
 
     .jj-list-tit {
         font-size: 16px;
@@ -880,12 +913,12 @@
                     <div class="col s12 m8 l8 copy-right">
                         Copyright&nbsp;&copy;
                         
-                            <span id="year">
-                                2020-2021
-                            </span>
-                            
+                                <span id="year">
+                                    2021
+                                </span>
+                                
                                     <span id="year">
-                                        2020
+                                        2021
                                     </span>
                                     <a href="/about" target="_blank">
                                         overwhat
@@ -897,7 +930,7 @@
                                     
                                         &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words:&nbsp;<span
                                             class="white-color">
-                                            23.7k
+                                            25.1k
                                         </span>&nbsp;
                                         
                                             <!-- 访问量 -->
@@ -952,12 +985,12 @@
                                                                             var days = hours * 24;
                                                                             var years = days * 365;
                                                                             var today = new Date();
-                                                                            var startYear = "2020";
-                                                                            var startMonth = "6";
-                                                                            var startDate = "26";
-                                                                            var startHour = "13";
-                                                                            var startMinute = "14";
-                                                                            var startSecond = "20";
+                                                                            var startYear = "2021";
+                                                                            var startMonth = "1";
+                                                                            var startDate = "1";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
                                                                             var todayYear = today.getFullYear();
                                                                             var todayMonth = today.getMonth() + 1;
                                                                             var todayDate = today.getDate();
@@ -997,12 +1030,12 @@
                                                                             var days = hours * 24;
                                                                             var years = days * 365;
                                                                             var today = new Date();
-                                                                            var startYear = "2020";
-                                                                            var startMonth = "6";
-                                                                            var startDate = "26";
-                                                                            var startHour = "13";
-                                                                            var startMinute = "14";
-                                                                            var startSecond = "20";
+                                                                            var startYear = "2021";
+                                                                            var startMonth = "1";
+                                                                            var startDate = "1";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
                                                                             var todayYear = today.getFullYear();
                                                                             var todayMonth = today.getMonth() + 1;
                                                                             var todayDate = today.getDate();
